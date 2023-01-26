@@ -11,6 +11,6 @@
     font-family: "Satoshi", sans-serif;
   }
   .wrapper-landing {
-    @apply w-full px-8 xl:mx-auto xl:w-1200 xl:px-0;
+    @apply w-full px-6 xl:mx-auto xl:w-1200 xl:px-0;
   }
 }
