@@ -1,0 +1,55 @@
+/* Contact Animation */
+
+#contact,
+#about {
+  animation: growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform: scale(0.5);
+}
+
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 80%;
+  left: 80%;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  border: 7px solid #3ec9c9;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader::before {
+  animation-delay: 1s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

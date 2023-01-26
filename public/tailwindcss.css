@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply antialiased;
+  }
+  body {
+    font-family: "Satoshi", sans-serif;
+  }
+  .wrapper-landing {
+    @apply w-full px-8 xl:mx-auto xl:w-1200 xl:px-0;
+  }
+}
