@@ -1,3 +1,14 @@
+* {
+  cursor: url("./assets/images/pointer.png"), auto;
+}
+
+::selection {
+  background-color: #e8f85ac4;
+  color: #000;
+}
+/* ----------------------------------- */
+/* ----------------------------------- */
+
 /* The switch - the box around the slider */
 .switch {
   /* Variables */
@@ -76,10 +87,12 @@ input:hover:checked + .slider:before {
   box-shadow: 0 0.3em 0 var(--outline_color);
 }
 
-/* Animation */
+/* ----------------------------------- */
+/* ----------------------------------- */
 
 #contact,
-#about {
+#about,
+#cv {
   animation: growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   transform: scale(0.4);
 }
