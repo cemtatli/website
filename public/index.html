@@ -52,13 +52,11 @@
         </svg>
         <div><input class="l cursor-pointer" type="checkbox" onclick="darkMode()" /></div>
       </header>
-      <main class="mt-20 flex h-full w-full flex-col gap-15 lg:mt-4 lg:gap-8">
+      <main class="mt-8 flex h-full w-full flex-col gap-15 lg:mt-4 lg:gap-8">
         <!-- !About -->
         <div id="about" class="flex flex-col">
-          <div class="lg flex w-full flex-col items-center justify-center lg:mt-15 lg:w-1/2">
-            <h1 class="w-full -text--contact font-bold leading-none tracking-tighter text-white dark:-text--black lg:mb-8">
-              Hey, I’m Cem.
-            </h1>
+          <div class="flex w-full flex-col items-center justify-center lg:mt-15 lg:w-1/2">
+            <h1 class="mb-8 w-full -text--contact font-bold leading-none tracking-tighter text-white dark:-text--black">Hey, I’m Cem.</h1>
             <p class="text-xl tracking-wide text-white dark:-text--black">
               Front-End Developer focused entirely on ReactJS & NextJS. I have developed in many personal projects using JavaScript,
               Bootstrap, Tailwind CSS, SCSS, Django, Flutter and other technologies with accessibility, responsive design and mobile First
@@ -215,7 +213,7 @@
         </div>
       </main>
     </div>
-    <div class="loader"></div>
+    <div class="loader hidden lg:block"></div>
   </body>
   <script>
     function darkMode() {
