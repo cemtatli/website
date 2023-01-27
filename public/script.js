@@ -9,11 +9,3 @@ function darkMode() {
     localStorage.removeItem("dark");
   }
 }
-
-function modal(id) {
-  document.getElementById(id).classList.toggle("active");
-}
-
-function sidebar() {
-  document.querySelector(".sidebar").classList.toggle("active");
-}
