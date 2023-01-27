@@ -13,4 +13,8 @@
   .wrapper-landing {
     @apply w-full px-6 xl:mx-auto xl:w-1200 xl:px-0;
   }
+  .about-me,
+  .roadmap {
+    font-family: "Kalam", cursive;
+  }
 }

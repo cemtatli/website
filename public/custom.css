@@ -9,6 +9,23 @@
 /* ----------------------------------- */
 /* ----------------------------------- */
 
+::-webkit-scrollbar {
+  background: transparent;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #888;
+}
+
+/* ----------------------------------- */
+/* ----------------------------------- */
+
 /* The switch - the box around the slider */
 .switch {
   /* Variables */
@@ -92,9 +109,9 @@ input:hover:checked + .slider:before {
 
 #contact,
 #about,
-#cv {
-  animation: growIn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-  transform: scale(0.4);
+#roadmap {
+  animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform: scale(0.5);
 }
 
 @keyframes growIn {

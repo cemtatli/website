@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="myTheme">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="./custom.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/images/fav.png" type="image/x-icon" />
+    <!-- Fonts -->
     <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&f[]=lora@400&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&f[]=kalam@400&display=swap"
       rel="stylesheet"
     />
   </head>
 
-  <body class="min-h-screen w-full !-bg--black dark:!bg-zinc-50">
+  <body class="relative z-0 min-h-screen w-full !-bg--black dark:!bg-zinc-50">
     <div class="wrapper-landing">
       <!-- Header -->
       <header class="flex h-15 w-full items-center">
+        <!-- Dark Mode toogle -->
         <div class="flex w-full justify-end">
           <label class="switch">
             <input type="checkbox" onclick="darkMode()" />
@@ -28,18 +30,32 @@
         </div>
       </header>
       <main class="flex h-full w-full flex-col">
-        <div class="hidden lg:flex lg:flex-col">
+        <!-- Buble -->
+        <div class="absolute inset-4 z-[-1] hidden opacity-75 dark:opacity-25 xl:flex xl:flex-col">
           <div class="chat chat-start">
-            <div class="chat-bubble text-white">How to center a div ?</div>
+            <div class="chat-bubble my-4 rotate-12 select-none text-white">How to center a div ?</div>
           </div>
           <div class="chat chat-end">
-            <div class="chat-bubble text-white">I dont know :(</div>
+            <div class="chat-bubble my-5 rotate-12 select-none tracking-wide text-white">border:1px solid red;</div>
+          </div>
+        </div>
+        <!-- Buble -->
+        <div class="absolute inset-4 z-[-1] my-15 hidden opacity-75 dark:opacity-25 xl:flex xl:flex-col">
+          <div class="chat chat-start">
+            <div class="chat-bubble my-10 -rotate-6 select-none tracking-wide text-white">!important</div>
+          </div>
+          <div class="chat chat-end">
+            <div class="chat-bubble my-10 -rotate-2 select-none text-white">z-index:9999999999</div>
           </div>
         </div>
         <!-- About -->
         <div id="about" class="my-6 flex flex-col lg:my-10">
           <div class="flex w-full flex-col items-center justify-center lg:w-1/2">
-            <h1 class="mb-2 w-full text-3xl font-semibold text-white dark:-text--black lg:-text--contact lg:font-bold">Hey, I’m Cem</h1>
+            <h1
+              class="about-me mb-4 w-full text-3xl font-semibold tracking-tight text-white dark:-text--black lg:-text--contact lg:font-bold"
+            >
+              Hey, I’m Cem !
+            </h1>
             <p class="text-base text-white dark:-text--black lg:text-lg">
               Front-End Developer focused entirely on ReactJS & NextJS. I have developed in many personal projects using JavaScript,
               Bootstrap, Tailwind CSS, SCSS, Django, Flutter and other technologies with accessibility, responsive design and mobile-first
@@ -47,17 +63,30 @@
             </p>
           </div>
         </div>
-        <!-- CV -->
-        <div id="cv" class="my-6 flex flex-col lg:my-10">
-          <div class="flex w-full flex-col items-center justify-center gap-6 lg:w-1/2">
-            <h1 class="mb-2 w-full text-xl font-semibold text-white dark:-text--black lg:text-3xl lg:font-semibold">#roadmap</h1>
-            <input type="range" min="0" max="100" value="40" class="range" step="20" disabled />
+        <!-- Roadmap -->
+        <div id="roadmap" class="my-6 flex flex-col lg:my-10">
+          <div class="flex w-full flex-col items-center justify-center gap-6 lg:w-full">
+            <h1 class="roadmap w-full text-2xl font-semibold tracking-wide text-white dark:-text--black lg:text-3xl lg:font-semibold">
+              #roadmap
+            </h1>
+            <!--             <input type="range" min="0" max="100" value="40" class="range" step="20" disabled />
             <div class="flex w-full justify-between text-xs">
-              <span class="text-sm dark:-text--black lg:text-base">HTML</span>
-              <span class="text-sm dark:-text--black lg:text-base">CSS</span>
-              <span class="text-sm dark:-text--black lg:text-base">JavaScript</span>
-              <span class="text-sm dark:-text--black lg:text-base">React</span>
-              <span class="text-sm dark:-text--black lg:text-base">NextJS & TS</span>
+              <span class="select-none text-sm dark:-text--black lg:text-base">HTML</span>
+              <span class="select-none text-sm dark:-text--black lg:text-base">CSS</span>
+              <span class="select-none text-sm dark:-text--black lg:text-base">JavaScript</span>
+              <span class="select-none text-sm dark:-text--black lg:text-base">React</span>
+              <span class="select-none text-sm dark:-text--black lg:text-base">NextJS & TS</span>
+            </div> -->
+            <div class="mr-auto lg:before:-ml-12">
+              <ul class="steps steps-vertical w-full lg:steps-horizontal">
+                <li class="step-success step tracking-wide text-white dark:-text--black">HTML</li>
+                <li class="step-success step tracking-wide text-white dark:-text--black">CSS</li>
+                <li class="step-success step tracking-wide text-white dark:-text--black">CSS Frameworks</li>
+                <li class="step-success step tracking-wide text-white dark:-text--black">JavaScript</li>
+                <li class="step tracking-wide text-white dark:-text--black">React & Vue</li>
+                <li class="step tracking-wide text-white dark:-text--black">Next.js & TypeScript</li>
+                <li class="step tracking-wide text-white dark:-text--black">Node.js</li>
+              </ul>
             </div>
           </div>
         </div>
