@@ -11,11 +11,11 @@ module.exports = {
         1200: "75rem",
       },
       colors: {
-        "--black": "#111111",
+        "--black": "#001a66",
         "--gray": "#888888",
         "--green": "#31d39e",
         "--purple": "#E84FBD",
-        "--blue": "#3EC9C9",
+        "--blue": "#23c3f3",
         "--yellow": "#edff50d5",
         "--yellow2": "#edff50d5",
       },
