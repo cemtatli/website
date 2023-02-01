@@ -3,7 +3,7 @@
 }
 
 ::selection {
-  background-color: rgba(167, 167, 167, 0.569);
+  background-color: hsla(0, 0%, 65%, 0.25);
   color: #111;
 }
 /* ----------------------------------- */
@@ -19,7 +19,7 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 6px;
+  border-radius: 4px;
   background: #888;
 }
 
@@ -110,8 +110,8 @@ input:hover:checked + .slider:before {
 #contact,
 #about,
 #roadmap {
-  animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-  transform: scale(0.5);
+  animation: growIn 2.5s cubic-bezier(0.075, 0.92, 0.175, 1) forwards;
+  transform: scale(0.4);
 }
 
 @keyframes growIn {
