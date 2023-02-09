@@ -11,8 +11,8 @@ module.exports = {
         1200: "75rem",
       },
       colors: {
-        "--black": "#001a66",
-        "--gray": "#888888",
+        "--black": "#002364",
+        "--gray": "#5B7887",
         "--green": "#31d39e",
         "--purple": "#E84FBD",
         "--blue": "#23c3f3",
@@ -20,7 +20,7 @@ module.exports = {
         "--yellow2": "#edff50d5",
       },
       fontSize: {
-        "--contact": ["50px", "60px"],
+        "--contact": ["54px", "60px"],
       },
     },
   },

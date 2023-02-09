@@ -110,8 +110,8 @@ input:hover:checked + .slider:before {
 #contact,
 #about,
 #roadmap {
-  animation: growIn 2.5s cubic-bezier(0.075, 0.92, 0.175, 1) forwards;
-  transform: scale(0.4);
+  animation: growIn 2s cubic-bezier(0.075, 0.92, 0.175, 1) forwards;
+  transform: scale(0.5);
 }
 
 @keyframes growIn {
