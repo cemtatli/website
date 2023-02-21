@@ -3,8 +3,8 @@
 }
 
 ::selection {
-  background-color: hsla(0, 0%, 65%, 0.25);
-  color: #111;
+  background-color: hsla(236, 100%, 75%, 0.25);
+  color: #ffffff;
 }
 /* ----------------------------------- */
 /* ----------------------------------- */
@@ -101,7 +101,7 @@ input:checked + .slider:before {
 /* Raise thumb when hovered & checked */
 input:hover:checked + .slider:before {
   transform: translateX(calc(var(--switch_width) - var(--switch_height))) translateY(-0.3em);
-  box-shadow: 0 0.3em 0 var(--outline_color);
+  box-shadow: 0 0.4em 0 var(--outline_color);
 }
 
 /* ----------------------------------- */
@@ -111,7 +111,7 @@ input:hover:checked + .slider:before {
 #about,
 #roadmap {
   animation: growIn 2s cubic-bezier(0.075, 0.92, 0.175, 1) forwards;
-  transform: scale(0.5);
+  transform: scale(0.4);
 }
 
 @keyframes growIn {

@@ -22,7 +22,6 @@ function start() {
   timer = setInterval(() => {
     initialText.split("").forEach((text) => {
       const random = Math.floor(Math.random() * initialChance + 1);
-      console.log("random", random);
       if (random != initialChance) {
         currentText.push(text);
         return;

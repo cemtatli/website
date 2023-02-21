@@ -2598,11 +2598,6 @@ body {
   letter-spacing: -0.05em;
 }
 
-.-text--gray {
-  --tw-text-opacity: 1;
-  color: rgb(91 120 135 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2610,10 +2605,6 @@ body {
 
 .text-opacity-60 {
   --tw-text-opacity: 0.6;
-}
-
-.text-opacity-100 {
-  --tw-text-opacity: 1;
 }
 
 .opacity-75 {
@@ -2644,106 +2635,6 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.steps .first-letter\:step::first-letter {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  grid-template-columns: auto;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  grid-template-rows: 40px 1fr;
-  place-items: center;
-  text-align: center;
-  min-width: 4rem;
-}
-
-.steps .first-letter\:step:before::first-letter {
-  top: 0px;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  height: 0.5rem;
-  width: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
-  content: "";
-  margin-left: -100%;
-}
-
-.steps .first-letter\:step:after::first-letter {
-  content: counter(step);
-  counter-increment: step;
-  z-index: 1;
-  position: relative;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  display: grid;
-  height: 2rem;
-  width: 2rem;
-  place-items: center;
-  place-self: center;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
-}
-
-.steps .first-letter\:step:first-child::first-letter,:before {
-  content: none;
-}
-
-.steps .first-letter\:step[data-content]::first-letter,:after {
-  content: attr(data-content);
-}
-
-.steps-horizontal .first-letter\:step::first-letter {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  place-items: center;
-  text-align: center;
-}
-
-.steps-vertical .first-letter\:step::first-letter {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-
-.steps-horizontal .first-letter\:step::first-letter {
-  grid-template-rows: 40px 1fr;
-  grid-template-columns: auto;
-  min-width: 4rem;
-}
-
-.steps-horizontal .first-letter\:step:before::first-letter {
-  height: 0.5rem;
-  width: 100%;
-  --tw-translate-y: 0px;
-  --tw-translate-x: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  content: "";
-  margin-left: -100%;
-}
-
-.steps-vertical .first-letter\:step::first-letter {
-  gap: 0.5rem;
-  grid-template-columns: 40px 1fr;
-  grid-template-rows: auto;
-  min-height: 4rem;
-  justify-items: start;
-}
-
-.steps-vertical .first-letter\:step:before::first-letter {
-  height: 100%;
-  width: 0.5rem;
-  --tw-translate-y: -50%;
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  margin-left: 50%;
-}
-
 .hover\:-text--green:hover {
   --tw-text-opacity: 1;
   color: rgb(49 211 158 / var(--tw-text-opacity));
@@ -2762,6 +2653,11 @@ body {
   font-weight: 500;
 }
 
+.dark .dark\:-text--gray {
+  --tw-text-opacity: 1;
+  color: rgb(91 120 135 / var(--tw-text-opacity));
+}
+
 .dark .dark\:-text--black {
   --tw-text-opacity: 1;
   color: rgb(0 35 100 / var(--tw-text-opacity));
@@ -2772,17 +2668,8 @@ body {
   color: rgb(113 113 122 / var(--tw-text-opacity));
 }
 
-.dark .dark\:-text--gray {
-  --tw-text-opacity: 1;
-  color: rgb(91 120 135 / var(--tw-text-opacity));
-}
-
 .dark .dark\:text-opacity-60 {
   --tw-text-opacity: 0.6;
-}
-
-.dark .dark\:opacity-25 {
-  opacity: 0.25;
 }
 
 .dark .dark\:opacity-30 {
