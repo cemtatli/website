@@ -12,7 +12,8 @@ function darkMode() {
 
 const text = document.getElementById("effect");
 
-const initialText = "Hey, I’m Cem !";
+const initialText = `Hey, I’m Cem! <br>
+Frontend Developer based in Turkey.`;
 
 let currentText = [];
 let initialChance = 1;

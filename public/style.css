@@ -2397,11 +2397,19 @@ body {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .inset-4 {
   top: 1rem;
   right: 1rem;
   bottom: 1rem;
   left: 1rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-0 {
@@ -2410,6 +2418,10 @@ body {
 
 .z-\[-1\] {
   z-index: -1;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .my-4 {
@@ -2540,6 +2552,15 @@ body {
   background-color: rgb(20 20 20 / var(--tw-bg-opacity)) !important;
 }
 
+.-bg--black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2568,6 +2589,11 @@ body {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -2649,6 +2675,11 @@ body {
   background-color: rgb(250 250 250 / var(--tw-bg-opacity)) !important;
 }
 
+.dark .dark\:-bg--black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:font-medium {
   font-weight: 500;
 }
@@ -2679,6 +2710,11 @@ body {
 .dark .dark\:hover\:-text--blue:hover {
   --tw-text-opacity: 1;
   color: rgb(35 195 243 / var(--tw-text-opacity));
+}
+
+.dark .dark\:hover\:-text--green:hover {
+  --tw-text-opacity: 1;
+  color: rgb(13 179 165 / var(--tw-text-opacity));
 }
 
 .dark .group:hover .dark\:group-hover\:-text--black {
