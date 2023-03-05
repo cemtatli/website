@@ -2537,7 +2537,7 @@ body {
 
 .\!-bg--black {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(0 35 100 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity)) !important;
 }
 
 .px-2 {
@@ -2637,7 +2637,7 @@ body {
 
 .hover\:-text--green:hover {
   --tw-text-opacity: 1;
-  color: rgb(49 211 158 / var(--tw-text-opacity));
+  color: rgb(138 255 97 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:opacity-100 {
@@ -2660,7 +2660,7 @@ body {
 
 .dark .dark\:-text--black {
   --tw-text-opacity: 1;
-  color: rgb(0 35 100 / var(--tw-text-opacity));
+  color: rgb(20 20 20 / var(--tw-text-opacity));
 }
 
 .dark .dark\:text-zinc-500 {
@@ -2683,7 +2683,7 @@ body {
 
 .dark .group:hover .dark\:group-hover\:-text--black {
   --tw-text-opacity: 1;
-  color: rgb(0 35 100 / var(--tw-text-opacity));
+  color: rgb(20 20 20 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
