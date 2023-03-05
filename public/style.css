@@ -2637,7 +2637,7 @@ body {
 
 .hover\:-text--green:hover {
   --tw-text-opacity: 1;
-  color: rgb(138 255 97 / var(--tw-text-opacity));
+  color: rgb(13 179 165 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:opacity-100 {

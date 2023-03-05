@@ -13,11 +13,9 @@ module.exports = {
       colors: {
         "--black": "#141414",
         "--gray": "#5B7887",
-        "--green": "#8AFF61",
+        "--green": "#0db3a5",
         "--purple": "#E84FBD",
         "--blue": "#23c3f3",
-        "--yellow": "#edff50d5",
-        "--yellow2": "#edff50d5",
       },
       fontSize: {
         "--contact": ["54px", "60px"],
