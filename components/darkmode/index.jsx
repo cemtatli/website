@@ -19,7 +19,6 @@ export default function DarkMode() {
           <Sun1 size={24} variant="Broken" className="hover:text-white cursor-pointer text-text" />
         </Tooltip>
       </Link>
-
       <Link href={"/"}>
         <Tooltip content="Dark Mode" placement="right-end" className="text-xs bg-hover text-white">
           <Moon
