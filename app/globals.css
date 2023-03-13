@@ -8,7 +8,7 @@
     @apply antialiased h-full w-full flex bg-bg text-text;
   }
   main {
-    @apply flex flex-auto max-w-lg mx-auto flex-col px-6 py-12 sm:py-18 mb-10 overflow-scroll;
+    @apply flex flex-auto max-w-lg mx-auto flex-col px-6 py-10 sm:py-18 my-10;
   }
   .loader {
     display: flex;

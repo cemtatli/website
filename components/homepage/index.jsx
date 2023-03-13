@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 overflow-scroll">
       {/* Avatar & Title */}
       <section className="flex items-start xs:items-center justify-center xs:justify-start gap-2 xs:gap-0 w-full flex-col xs:flex-row">
-        <div className="w-24 h-24 relative ">
-          <Image src="/avatar.png" alt="cemtatli" width={96} height={96} />
+        <div className=" w-16 h-16 sm:w-24 sm:h-24 relative ">
+          <Image src="/avatar.png" alt="cemtatli" fill />
         </div>
         <div className="xs:ml-4 ">
           <h2 className="text-lg font-medium text-white">Cem Tatlı </h2>
@@ -91,21 +91,6 @@ export default function HomePage() {
         </Link>
         <p className="text-text text-sm">
           You can contact me for any questions or suggestions. I will be happy to help you.
-        </p>
-      </section>
-      {/* Project */}
-      <section className="flex flex-col items-start justify-center gap-2">
-        <Link href="/" className="text-white text-sm hover:underline flex items-center group">
-          Project
-          <ArrowRight
-            color="#d9e3f0"
-            size={14}
-            variant="Outline"
-            className="-rotate-45 ml-0.5 hidden group-hover:block"
-          />
-        </Link>
-        <p className="text-text text-sm">
-          I have worked on many projects. You can see the projects I have worked on.
         </p>
       </section>
       {/* Hobbies */}
