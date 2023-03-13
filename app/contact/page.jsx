@@ -17,7 +17,7 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             LinkedIn
-            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
           <Link
             href="https://github.com/cemtatli"
@@ -25,7 +25,7 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             GitHub
-            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
           <Link
             href="https://twitter.com/vaycem"
@@ -33,7 +33,7 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             Twitter
-            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
           <Link
             href="https://bento.me/cem"
@@ -41,7 +41,7 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             Bento
-            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
           <Link
             href="https://codepen.io/cemtatli"
@@ -49,7 +49,7 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             CodePen
-            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
 
           <Link
@@ -58,7 +58,7 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             Spotify
-            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
         </div>
       </div>

@@ -9,13 +9,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
-    <ThemeProvider>
-      <html lang="en" className={inter.className}>
+    <html lang="en" className={inter.className}>
+      <ThemeProvider>
         <body>
           <Sidebar />
           <main className="">{children}</main>
         </body>
-      </html>
-    </ThemeProvider>
+      </ThemeProvider>
+    </html>
   );
 }

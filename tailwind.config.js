@@ -24,6 +24,9 @@ module.exports = withMT({
         text: "#aaa",
         hover: "#111",
       },
+      screens: {
+        xs: "425px",
+      },
     },
   },
   plugins: [],

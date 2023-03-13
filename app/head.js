@@ -9,7 +9,6 @@ export default function Head() {
       <meta name="author" content="Cem Tatlı" />
       <meta name="keywords" content="Next.js" />
       <link rel="icon" href="../public/logo.png" />
-      <link rel="manifest" href="/manifest.json" />
     </>
   );
 }
