@@ -23,6 +23,7 @@ module.exports = withMT({
         bg: "#222",
         text: "#aaa",
         hover: "#111",
+        skills: "#cdf686",
       },
       screens: {
         xs: "425px",
