@@ -17,7 +17,7 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             LinkedIn
-            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
+            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
           <Link
             href="https://github.com/cemtatli"
@@ -58,6 +58,14 @@ export default function Contact() {
             className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             Spotify
+            <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
+          </Link>
+          <Link
+            href="mailto:cemtatli@protonmail.com"
+            target="_blank"
+            className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
+          >
+            E-mail
             <ArrowRight color="#d9e3f0" size={14} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
         </div>

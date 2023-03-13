@@ -1,6 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
-import { ArrowRight } from "iconsax-react";
+import { ArrowRight, DirectSend } from "iconsax-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,7 +10,7 @@ export default function HomePage() {
       {/* Avatar & Title */}
       <section className="flex items-start xs:items-center justify-center xs:justify-start gap-2 xs:gap-0 w-full flex-col xs:flex-row">
         <div className="w-24 h-24 relative ">
-          <Image src="/avatar.png" alt="cemtatli" fill />
+          <Image src="/avatar.png" alt="cemtatli" width={96} height={96} />
         </div>
         <div className="xs:ml-4 ">
           <h2 className="text-lg font-medium text-white">Cem Tatlı </h2>
@@ -33,7 +33,6 @@ export default function HomePage() {
           improve himself.
         </p>
       </section>
-
       {/* Skills */}
       <section className="flex flex-col items-start justify-center gap-2">
         <h2 className="text-sm font-medium text-white">Skills</h2>
@@ -49,6 +48,9 @@ export default function HomePage() {
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             Tailwind CSS
+          </span>
+          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
+            Bootstrap
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             JavaScript
@@ -73,6 +75,24 @@ export default function HomePage() {
           </span>
         </div>
       </section>
+      {/* Contact */}
+      <section className="flex flex-col items-start justify-center gap-2">
+        <Link
+          href="/contact"
+          className="text-white text-sm hover:underline flex items-center group"
+        >
+          Contact
+          <ArrowRight
+            color="#d9e3f0"
+            size={14}
+            variant="Outline"
+            className="-rotate-45 ml-0.5 hidden group-hover:block"
+          />
+        </Link>
+        <p className="text-text text-sm">
+          You can contact me for any questions or suggestions. I will be happy to help you.
+        </p>
+      </section>
       {/* Project */}
       <section className="flex flex-col items-start justify-center gap-2">
         <Link
@@ -90,6 +110,30 @@ export default function HomePage() {
         <p className="text-text text-sm">
           I have worked on many projects. You can see the projects I have worked on.
         </p>
+      </section>
+      {/* Hobbies */}
+      <section className="flex flex-col items-start justify-center gap-2">
+        <h2 className="text-sm font-medium text-white">Hobbies</h2>
+        <p className="text-text text-sm">
+          Development is not the only thing I do. I have many hobbies. You can see my hobbies.
+        </p>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
+            Tech literacy
+          </span>
+          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
+            Podcast
+          </span>
+          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
+            Blockchain
+          </span>
+          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
+            Web3
+          </span>
+          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
+            Cryptocurrency
+          </span>
+        </div>
       </section>
     </div>
   );
