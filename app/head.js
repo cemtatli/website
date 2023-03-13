@@ -8,7 +8,6 @@ export default function Head() {
       <meta name="description" content="Cem Tatlı" />
       <meta name="author" content="Cem Tatlı" />
       <meta name="keywords" content="Next.js" />
-      <link rel="icon" href="../public/logo.png" />
     </>
   );
 }
