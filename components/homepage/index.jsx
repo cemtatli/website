@@ -7,15 +7,17 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-10">
+      {/* Avatar & Title */}
       <section className="flex items-start xs:items-center justify-center xs:justify-start gap-2 xs:gap-0 w-full flex-col xs:flex-row">
         <div className="w-24 h-24 relative ">
           <Image src="/avatar.png" alt="cemtatli" fill />
         </div>
-        <div className="ml-4">
+        <div className="xs:ml-4 ">
           <h2 className="text-lg font-medium text-white">Cem Tatlı </h2>
           <p className="text-text text-sm">Frontend Developer in Izmir, Turkey </p>
         </div>
       </section>
+      {/* About  */}
       <section className="flex flex-col items-start justify-center gap-2">
         <Link href="/about" className="text-white text-sm hover:underline flex items-center group">
           About
@@ -32,6 +34,7 @@ export default function HomePage() {
         </p>
       </section>
 
+      {/* Skills */}
       <section className="flex flex-col items-start justify-center gap-2">
         <h2 className="text-sm font-medium text-white">Skills</h2>
         <p className="text-text text-sm">
@@ -70,7 +73,7 @@ export default function HomePage() {
           </span>
         </div>
       </section>
-
+      {/* Project */}
       <section className="flex flex-col items-start justify-center gap-2">
         <Link
           href="/project"
