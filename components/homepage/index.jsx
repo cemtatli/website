@@ -70,9 +70,6 @@ export default function HomePage() {
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             Git
           </span>
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Figma
-          </span>
         </div>
       </section>
       {/* Hobbies */}
@@ -87,9 +84,6 @@ export default function HomePage() {
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             Podcast
-          </span>
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Blockchain
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             Web3
