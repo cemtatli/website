@@ -6,8 +6,8 @@ import { ArrowRight } from "iconsax-react";
 export default function Home() {
   return (
     <div className="flex flex-col gap-10">
-      <section className="flex items-center">
-        <div className="w-24 h-24 relative">
+      <section className="flex items-start xs:items-center justify-center xs:justify-start gap-2 xs:gap-0 w-full flex-col xs:flex-row">
+        <div className="w-24 h-24 relative ">
           <Image src="/avatar.png" alt="cemtatli" fill />
         </div>
         <div className="ml-4">
