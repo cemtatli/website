@@ -7,23 +7,58 @@ export default function Contact() {
     <>
       <div className="flex gap-2 flex-col">
         <h3 className="text-base text-white">Contact</h3>
-        <p className="text-sm leading-normal">You can contact me via the following channels.</p>
+        <p className="text-sm leading-normal mb-2">
+          You can contact me via the following channels.
+        </p>
         <div className="flex gap-2 flex-col">
           <Link
             href="https://www.linkedin.com/in/cemtatli/"
             target="_blank"
-            className="text-sm leading-normal text-blue-500 group flex items-center"
+            className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             LinkedIn
-            <ArrowRight color="#d9e3f0" size={14} className="-rotate-45 ml-1" />
+            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
           <Link
             href="https://github.com/cemtatli"
             target="_blank"
-            className="text-sm leading-normal text-blue-500 group flex items-center"
+            className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
           >
             GitHub
-            <ArrowRight color="#d9e3f0" size={14} className="-rotate-45 ml-1" />
+            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+          </Link>
+          <Link
+            href="https://twitter.com/vaycem"
+            target="_blank"
+            className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
+          >
+            Twitter
+            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+          </Link>
+          <Link
+            href="https://bento.me/cem"
+            target="_blank"
+            className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
+          >
+            Bento
+            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+          </Link>
+          <Link
+            href="https://codepen.io/cemtatli"
+            target="_blank"
+            className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
+          >
+            CodePen
+            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
+          </Link>
+
+          <Link
+            href=""
+            target="_blank"
+            className="text-sm leading-normal hover:text-white hover:underline group flex items-center"
+          >
+            Spotify
+            <ArrowRight color="#d9e3f0" size={12} variant="Outline" className="-rotate-45 ml-0.5" />
           </Link>
         </div>
       </div>
