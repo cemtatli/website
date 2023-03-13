@@ -75,24 +75,6 @@ export default function HomePage() {
           </span>
         </div>
       </section>
-      {/* Contact */}
-      <section className="flex flex-col items-start justify-center gap-2">
-        <Link
-          href="/contact"
-          className="text-white text-sm hover:underline flex items-center group"
-        >
-          Contact
-          <ArrowRight
-            color="#d9e3f0"
-            size={14}
-            variant="Outline"
-            className="-rotate-45 ml-0.5 hidden group-hover:block"
-          />
-        </Link>
-        <p className="text-text text-sm">
-          You can contact me for any questions or suggestions. I will be happy to help you.
-        </p>
-      </section>
       {/* Hobbies */}
       <section className="flex flex-col items-start justify-center gap-2">
         <h2 className="text-sm font-medium text-white">Hobbies</h2>
@@ -116,6 +98,24 @@ export default function HomePage() {
             Cryptocurrency
           </span>
         </div>
+      </section>
+      {/* Contact */}
+      <section className="flex flex-col items-start justify-center gap-2">
+        <Link
+          href="/contact"
+          className="text-white text-sm hover:underline flex items-center group"
+        >
+          Contact
+          <ArrowRight
+            color="#d9e3f0"
+            size={14}
+            variant="Outline"
+            className="-rotate-45 ml-0.5 hidden group-hover:block"
+          />
+        </Link>
+        <p className="text-text text-sm">
+          You can contact me for any questions or suggestions. I will be happy to help you.
+        </p>
       </section>
     </div>
   );

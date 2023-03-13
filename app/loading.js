@@ -1,12 +1,13 @@
 import React from "react";
+import styles from "./styles.module.css";
 
 export default function Loading() {
   return (
-    <div className="loader-wrapper">
-      <div className="loader">
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+    <div className={styles.loader - wrapper}>
+      <div className={styles.loader}>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
       </div>
     </div>
   );
