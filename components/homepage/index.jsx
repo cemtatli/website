@@ -22,10 +22,9 @@ export default function HomePage() {
         <Link href="/about" className="text-white text-sm hover:underline flex items-center group ">
           About
           <ArrowRight
-            color="#d9e3f0"
             size={14}
             variant="Outline"
-            className="-rotate-45 ml-0.5 block sm:hidden group-hover:block"
+            className="-rotate-45 ml-0.5 hidden group-hover:block text-white sm:text-[#d9e3f0]"
           />
         </Link>
         <p className="text-text text-sm">
@@ -101,10 +100,9 @@ export default function HomePage() {
         >
           Contact
           <ArrowRight
-            color="#d9e3f0"
             size={14}
             variant="Outline"
-            className="-rotate-45 ml-0.5 hidden group-hover:block"
+            className="-rotate-45 ml-0.5 hidden group-hover:block text-white sm:text-[#d9e3f0]"
           />
         </Link>
         <p className="text-text text-sm">
