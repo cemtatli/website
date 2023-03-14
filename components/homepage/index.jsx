@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 ">
       {/* Avatar & Title */}
       <section className="flex items-start xs:items-center justify-center xs:justify-start gap-2 xs:gap-0 w-full flex-col xs:flex-row">
         <div className=" w-16 h-16 sm:w-24 sm:h-24 relative ">
@@ -19,13 +19,13 @@ export default function HomePage() {
       </section>
       {/* About  */}
       <section className="flex flex-col items-start justify-center gap-2">
-        <Link href="/about" className="text-white text-sm hover:underline flex items-center group">
+        <Link href="/about" className="text-white text-sm hover:underline flex items-center group ">
           About
           <ArrowRight
             color="#d9e3f0"
             size={14}
             variant="Outline"
-            className="-rotate-45 ml-0.5 hidden group-hover:block"
+            className="-rotate-45 ml-0.5 block sm:hidden group-hover:block"
           />
         </Link>
         <p className="text-text text-sm">

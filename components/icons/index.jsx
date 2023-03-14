@@ -4,6 +4,7 @@ import React from "react";
 import { Link21, Setting4, User, FolderOpen, Home, Bookmark2 } from "iconsax-react";
 import { Tooltip } from "@material-tailwind/react";
 import Link from "next/link";
+import DarkMode from "../darkmode";
 
 export default function Icons() {
   return (
@@ -18,7 +19,7 @@ export default function Icons() {
           <User size={24} variant="Broken" className="hover:text-white  cursor-pointer text-text" />
         </Tooltip>
       </Link>
-      <Link href={"/"}>
+      <Link href={"https://github.com/cemtatli"} target={"_blank"}>
         <Tooltip content="Project" placement="right-start" className="text-xs bg-hover text-white">
           <FolderOpen
             size={24}
@@ -49,7 +50,7 @@ export default function Icons() {
           />
         </Tooltip>
       </Link>
-      <Link href={"/"}>
+      {/*       <Link href={"/"}>
         <Tooltip content="Settings" placement="right-start" className="text-xs bg-hover text-white">
           <Setting4
             size={24}
@@ -57,7 +58,8 @@ export default function Icons() {
             className="hover:text-white  cursor-pointer text-text"
           />
         </Tooltip>
-      </Link>
+      </Link> */}
+      {/*       <DarkMode /> */}
     </>
   );
 }
