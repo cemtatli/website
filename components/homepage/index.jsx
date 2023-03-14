@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-8 ">
+    <div className="flex flex-col gap-8 py-4 px-2">
       {/* Avatar & Title */}
       <section className="flex items-start xs:items-center justify-center xs:justify-start gap-2 xs:gap-0 w-full flex-col xs:flex-row">
         <div className=" w-16 h-16 sm:w-24 sm:h-24 relative ">
@@ -16,21 +16,6 @@ export default function HomePage() {
           <h2 className="text-lg font-medium text-white">Cem Tatlı </h2>
           <p className="text-text text-sm">Frontend Developer in Izmir, Turkey </p>
         </div>
-      </section>
-      {/* About  */}
-      <section className="flex flex-col items-start justify-center gap-2">
-        <Link href="/about" className="text-white text-sm hover:underline flex items-center group ">
-          About
-          <ArrowRight
-            size={14}
-            variant="Outline"
-            className="-rotate-45 ml-0.5 hidden group-hover:block text-white sm:text-[#d9e3f0]"
-          />
-        </Link>
-        <p className="text-text text-sm">
-          A frontend developer who is interested in technological developments and always strives to
-          improve himself.
-        </p>
       </section>
       {/* Skills */}
       <section className="flex flex-col items-start justify-center gap-2">
@@ -53,9 +38,6 @@ export default function HomePage() {
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             JavaScript
-          </span>
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            TypeScript
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             HTML
@@ -92,6 +74,21 @@ export default function HomePage() {
           </span>
         </div>
       </section>
+      {/* About  */}
+      <section className="flex flex-col items-start justify-center gap-2">
+        <Link href="/about" className="text-white text-sm hover:underline flex items-center group ">
+          About
+          <ArrowRight
+            size={14}
+            variant="bold"
+            className="-rotate-45 ml-1 block sm:hidden group-hover:block text-white sm:text-[#d9e3f0]"
+          />
+        </Link>
+        <p className="text-text text-sm">
+          A frontend developer who is interested in technological developments and always strives to
+          improve himself.
+        </p>
+      </section>
       {/* Contact */}
       <section className="flex flex-col items-start justify-center gap-2">
         <Link
@@ -101,13 +98,28 @@ export default function HomePage() {
           Contact
           <ArrowRight
             size={14}
-            variant="Outline"
-            className="-rotate-45 ml-0.5 hidden group-hover:block text-white sm:text-[#d9e3f0]"
+            variant="bold"
+            className="-rotate-45 ml-1 block sm:hidden group-hover:block text-white sm:text-[#d9e3f0]"
           />
         </Link>
         <p className="text-text text-sm">
           You can contact me for any questions or suggestions. I will be happy to help you.
         </p>
+      </section>
+      {/* Projects */}
+      <section className="flex flex-col items-start justify-center gap-2">
+        <Link
+          href="/projects"
+          className="text-white text-sm hover:underline flex items-center group "
+        >
+          Projects
+          <ArrowRight
+            size={14}
+            variant="bold"
+            className="-rotate-45 ml-1 block sm:hidden group-hover:block text-white sm:text-[#d9e3f0]"
+          />
+        </Link>
+        <p className="text-text text-sm">You can see my projects.</p>
       </section>
     </div>
   );
