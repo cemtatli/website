@@ -97,7 +97,7 @@ export default function HomePage() {
       <section className="flex flex-col items-start justify-center gap-2">
         <Link
           href="/contact"
-          className="text-white text-sm hover:underline flex items-center group"
+          className="text-white text-sm hover:underline flex items-center group "
         >
           Contact
           <ArrowRight
