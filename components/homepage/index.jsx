@@ -40,6 +40,9 @@ export default function HomePage() {
             JavaScript
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
+            Firebase
+          </span>
+          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             HTML
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
@@ -108,10 +111,7 @@ export default function HomePage() {
       </section>
       {/* Projects */}
       <section className="flex flex-col items-start justify-center gap-2">
-        <Link
-          href="/projects"
-          className="text-white text-sm hover:underline flex items-center group "
-        >
+        <Link href="/" className="text-white text-sm hover:underline flex items-center group ">
           Projects
           <ArrowRight
             size={14}
