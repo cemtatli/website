@@ -22,6 +22,7 @@ module.exports = withMT({
       colors: {
         bg: "#222",
         text: "#aaa",
+        link: "#d9e3f0",
         hover: "#111",
         skills: "#cdf686",
       },

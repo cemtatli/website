@@ -1,5 +1,4 @@
 import React from "react";
-import Icons from "../icons";
 import { HambergerMenu } from "iconsax-react";
 
 export default function MobileMenu() {

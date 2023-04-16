@@ -8,6 +8,6 @@
     @apply antialiased h-full w-full flex bg-bg text-text scroll-smooth relative;
   }
   main {
-    @apply flex flex-auto max-w-lg mx-auto flex-col px-6 py-12 sm:py-18 mb-8 overflow-auto;
+    @apply flex flex-auto max-w-xl mx-auto flex-col px-6 py-12 sm:py-18 mb-8 overflow-auto;
   }
 }

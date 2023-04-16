@@ -50,16 +50,7 @@ export default function Icons() {
           />
         </Tooltip>
       </Link>
-      {/*       <Link href={"/"}>
-        <Tooltip content="Settings" placement="right-start" className="text-xs bg-hover text-white">
-          <Setting4
-            size={24}
-            variant="Broken"
-            className="hover:text-white  cursor-pointer text-text"
-          />
-        </Tooltip>
-      </Link> */}
-      {/*       <DarkMode /> */}
+      <DarkMode />
     </>
   );
 }

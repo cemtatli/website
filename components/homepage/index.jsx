@@ -34,46 +34,22 @@ export default function HomePage() {
             Tailwind CSS
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Bootstrap
-          </span>
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             JavaScript
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Firebase
+            Module CSS
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            HTML
+            HTML5
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            CSS
+            CSS3
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Sass
+            SCSS
           </span>
           <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
             Git
-          </span>
-        </div>
-      </section>
-      {/* Hobbies */}
-      <section className="flex flex-col items-start justify-center gap-2">
-        <h2 className="text-sm font-medium text-white">Hobbies</h2>
-        <p className="text-text text-sm">
-          Development is not the only thing I do. I have many hobbies. You can see my hobbies.
-        </p>
-        <div className="flex flex-wrap gap-2 mt-2">
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Tech literacy
-          </span>
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Podcast
-          </span>
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Web3
-          </span>
-          <span className="text-xs text-white bg-gray-700 px-2 py-1 rounded-full hover:bg-skills hover:text-bg font-medium cursor-pointer">
-            Cryptocurrency
           </span>
         </div>
       </section>
@@ -102,7 +78,7 @@ export default function HomePage() {
           <ArrowRight
             size={14}
             variant="bold"
-            className="-rotate-45 ml-1 block sm:hidden group-hover:block text-white sm:text-[#d9e3f0]"
+            className="-rotate-45 ml-1 block sm:hidden group-hover:block text-white sm:text-link"
           />
         </Link>
         <p className="text-text text-sm">
@@ -111,12 +87,15 @@ export default function HomePage() {
       </section>
       {/* Projects */}
       <section className="flex flex-col items-start justify-center gap-2">
-        <Link href="/" className="text-white text-sm hover:underline flex items-center group ">
+        <Link
+          href="https://github.com/cemtatli"
+          className="text-white text-sm hover:underline flex items-center group "
+        >
           Projects
           <ArrowRight
             size={14}
             variant="bold"
-            className="-rotate-45 ml-1 block sm:hidden group-hover:block text-white sm:text-[#d9e3f0]"
+            className="-rotate-45 ml-1 block sm:hidden group-hover:block text-white sm:text-link"
           />
         </Link>
         <p className="text-text text-sm">You can see my projects.</p>
