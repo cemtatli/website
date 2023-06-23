@@ -15,7 +15,6 @@ import {
 import { Separator } from "./ui/separator";
 import { CommandItem } from "./ui/command";
 import { Loader2, Settings } from "lucide-react";
-import { Button } from "./ui/button";
 
 const DialogMenu = () => {
   return (
@@ -26,11 +25,11 @@ const DialogMenu = () => {
           <span>Settings</span>
         </CommandItem>
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent className="w-11/12 rounded-md">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-base">Settings</AlertDialogTitle>
-          <Separator className="my-1" />
-          <AlertDialogDescription className="mt-2 flex items-center justify-start gap-x-2">
+          <Separator className="my-2" />
+          <AlertDialogDescription className="flex items-center justify-start gap-x-2 pt-2">
             <Loader2 className="mr-2 h-5 w-5 animate-spin" />
             Not finished yet. Coming soon.
           </AlertDialogDescription>

@@ -1,9 +1,8 @@
 import {
   ExternalLink as LinkIcon,
   User2,
-  Anchor,
   Bookmark,
-  Settings,
+  Inspect,
   FolderOpenDot,
   PenTool,
 } from "lucide-react";
@@ -28,12 +27,12 @@ export function MenuContent() {
   return (
     <Command>
       <CommandInput placeholder="Search..." />
-      <CommandList className="h-full">
+      <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
           <Link href="/">
             <CommandItem className="cursor-pointer">
-              <Anchor className="mr-2 h-4 w-4" />
+              <Inspect className="mr-2 h-4 w-4" />
               <span>Home</span>
             </CommandItem>
           </Link>

@@ -1,8 +1,17 @@
 import { Separator } from "@/components/ui/separator";
 import React from "react";
-import { Github, LinkedinIcon, Codepen, TwitterIcon, BookOpen } from "lucide-react";
-import { badgeVariants } from "@/components/ui/badge";
+import {
+  Github,
+  LinkedinIcon,
+  Codepen,
+  TwitterIcon,
+  Headphones,
+  BookOpen,
+  Cloudy,
+} from "lucide-react";
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+import AvatarComponent from "@/components/avatar";
 
 const Contact = () => {
   interface Link {
@@ -37,22 +46,35 @@ const Contact = () => {
       icon: <BookOpen width={20} />,
       href: "https://medium.com/@cemtatli",
     },
+    {
+      title: "Bluesky",
+      icon: <Cloudy width={20} />,
+      href: "https://staging.bsky.app/profile/tatli.bsky.social",
+    },
+    {
+      title: "Spotify",
+      icon: <Headphones width={20} />,
+      href: "https://open.spotify.com/user/di1kgdass5is7rhxmu7mqzelc",
+    },
   ];
 
   return (
     <section className="mb-5 mt-10">
-      <div className="space-y-1.5">
-        <h4 className="text-base font-semibold leading-none"> Contact me?</h4>
-        <p className="text-sm text-muted-foreground">
-          My social media addresses that I actively use, you can reach me here.
-        </p>
+      <div className="flex gap-2.5">
+        <AvatarComponent />
+        <div className="flex flex-col space-y-1.5">
+          <h4 className="text-base font-semibold leading-none"> Contact me?</h4>
+          <p className="text-sm">
+            My social media addresses that I actively use, you can reach me here.
+          </p>
+        </div>
       </div>
       <Separator className="my-4" />
       <div className="flex items-center text-sm">
         <div className="flex flex-col gap-4 md:flex-row">
           {links.map((link, index) => (
             <Link
-              className={badgeVariants({ variant: "outline" })}
+              className={buttonVariants({ variant: "outline" })}
               target="_blank"
               key={index}
               href={link.href}

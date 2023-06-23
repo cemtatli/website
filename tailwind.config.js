@@ -10,9 +10,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
-        "2xl": "1440px",
+        "2xl": "1400px",
       },
     },
     extend: {
@@ -72,6 +72,11 @@ module.exports = {
       },
       height: {
         "screen-64": "calc(100vh - 4rem)",
+      },
+      maxWidth: {
+        prose: "24ch",
+        "prose-lg": "40ch",
+        "prose-xl": "60ch",
       },
     },
   },

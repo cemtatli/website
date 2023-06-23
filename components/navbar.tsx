@@ -4,9 +4,9 @@ import { MobileMenu } from "./mobile-menu";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-1 items-center gap-x-2 text-xl font-semibold">
+    <nav className="flex flex-1 items-center gap-x-2  font-semibold">
       <MobileMenu />
-      <h3 className="text-lg font-semibold">💠cemtatli.dev</h3>
+      <h3 className="text-base font-semibold md:text-lg">💠 cemtatli.dev</h3>
     </nav>
   );
 };
