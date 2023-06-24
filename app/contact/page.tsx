@@ -4,7 +4,9 @@ import {
   Github,
   LinkedinIcon,
   Codepen,
+  Mail,
   TwitterIcon,
+  Mic,
   Headphones,
   BookOpen,
   Cloudy,
@@ -21,6 +23,11 @@ const Contact = () => {
   }
 
   const links: Link[] = [
+    {
+      title: "Mail",
+      icon: <Mail width={20} />,
+      href: "mailto:cemtatli@protonmail.com",
+    },
     {
       title: "Twitter",
       icon: <TwitterIcon width={20} />,
@@ -52,6 +59,11 @@ const Contact = () => {
       href: "https://staging.bsky.app/profile/tatli.bsky.social",
     },
     {
+      title: "Discord",
+      icon: <Mic width={20} />,
+      href: "https://discord.com/users/vaycem",
+    },
+    {
       title: "Spotify",
       icon: <Headphones width={20} />,
       href: "https://open.spotify.com/user/di1kgdass5is7rhxmu7mqzelc",
@@ -63,14 +75,14 @@ const Contact = () => {
       <div className="flex gap-2.5">
         <AvatarComponent />
         <div className="flex flex-col space-y-1.5">
-          <h4 className="text-base font-semibold leading-none"> Contact me?</h4>
+          <h4 className="text-base font-semibold leading-none"> Contact me</h4>
           <p className="text-sm">
             My social media addresses that I actively use, you can reach me here.
           </p>
         </div>
       </div>
       <Separator className="my-4" />
-      <div className="flex items-center text-sm">
+      <div className="col-span-2 grid text-sm">
         <div className="flex flex-col gap-4 md:flex-row">
           {links.map((link, index) => (
             <Link

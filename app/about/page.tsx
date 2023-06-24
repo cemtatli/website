@@ -26,7 +26,7 @@ const sections: Section[] = [
     emoji: "👨🏻‍💻",
     year: "2023",
     content:
-      "I can say that 80 per cent of my development process was on youtube. Since I am a person who learns by watching, I can say that I developed most of the time by watching the live broadcasts of Prototürk, Beta Yazılım Günlüğü, Adem İlter, Teknasyon and Frontendship. I also attended Patika.dev courses.",
+      "I can say that 80% of my development process was on youtube. Since I am a person who learns by watching, I can say that I developed most of the time by watching the live broadcasts of Prototürk, Beta Yazılım Günlüğü, Adem İlter, Teknasyon and Frontendship. I also attended Patika.dev courses.",
   },
   {
     title: "Introduction to software",
@@ -96,7 +96,7 @@ const About = () => {
                     <div className="absolute inset-x-0 inset-y-2.5 mt-10 flex w-10 items-center justify-center">
                       <div className="pointer-events-none h-full w-px border-l-2 border-dotted"></div>
                     </div>
-                    <div className="z-0 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-zinc-50 align-middle">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-slate-50 align-middle">
                       <span role="img" aria-label={section.title}>
                         {section.emoji}
                       </span>
@@ -104,7 +104,7 @@ const About = () => {
                     <div className="flex-grow pl-4">
                       <div className="flex flex-col gap-y-1">
                         <p className="word-break m-0 font-semibold">{section.title}</p>
-                        <p className="word-break m-0 text-sm ">{section.content}</p>
+                        <p className="word-break m-0 text-sm">{section.content}</p>
                       </div>
                     </div>
                   </div>

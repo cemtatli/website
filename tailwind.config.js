@@ -74,9 +74,12 @@ module.exports = {
         "screen-64": "calc(100vh - 4rem)",
       },
       maxWidth: {
-        prose: "24ch",
+        prose: "20ch",
         "prose-lg": "40ch",
-        "prose-xl": "60ch",
+        "prose-xl": "100ch",
+      },
+      screens: {
+        xs: "450px",
       },
     },
   },
