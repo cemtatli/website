@@ -15,7 +15,7 @@ export function MobileMenu() {
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild>
-            <Button size={"icon"} variant="ghost">
+            <Button aria-label="mobile-menu" size={"icon"} variant="ghost">
               <MenuIcon />
             </Button>
           </SheetTrigger>

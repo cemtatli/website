@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import {
   SiTypescript,
@@ -17,7 +19,6 @@ import {
   SiFigma,
 } from "react-icons/si";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-
 import React from "react";
 
 const Skills: React.FC = () => {
@@ -40,20 +41,21 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <div className="mt-5 grid grid-cols-5 gap-3 md:flex ">
+    <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-5">
       {techs.map((tech, index) => (
-        <Button key={index} variant="outline" size="icon">
+        <Button key={index} variant="outline">
           {tech.icon ? (
-            <span className="flex items-center">
+            <>
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    {React.createElement(tech.icon, { className: "w-5 h-5 shrink-0" })}
+                    {React.createElement(tech.icon, { className: "w-4 h-4 mr-2 shrink-0" })}
                   </TooltipTrigger>
                   <TooltipContent>{tech.title}</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-            </span>
+              {tech.title}
+            </>
           ) : (
             tech.title
           )}

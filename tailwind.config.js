@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "1.5rem",
+      padding: "20px",
       screens: {
         "2xl": "1440px",
       },
@@ -76,7 +76,7 @@ module.exports = {
       maxWidth: {
         prose: "20ch",
         "prose-lg": "40ch",
-        "prose-xl": "100ch",
+        "prose-xl": "96ch",
       },
       screens: {
         xs: "450px",

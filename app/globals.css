@@ -78,7 +78,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  @apply w-2
 }
 
 ::-webkit-scrollbar-track {
@@ -86,8 +86,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-secondary;
+  @apply rounded-lg bg-foreground/30;
 }
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-foreground/25;
-}
+

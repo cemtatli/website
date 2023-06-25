@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "./ui/skeleton";
 
 const AvatarComponent = () => {
@@ -22,7 +22,7 @@ const AvatarComponent = () => {
       {isLoading ? (
         <Skeleton className="h-14 w-14 rounded-full bg-zinc-200" />
       ) : (
-        <AvatarImage src="https://github.com/cemtatli.png" />
+        <AvatarImage alt="cemtatli" src="https://github.com/cemtatli.png" />
       )}
     </Avatar>
   );
