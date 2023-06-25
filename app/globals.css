@@ -75,7 +75,19 @@
   body {
     @apply bg-background text-foreground;
   }
-  b {
-    @apply !font-medium;
-  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-secondary;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-foreground/25;
 }

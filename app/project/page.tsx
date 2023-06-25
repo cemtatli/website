@@ -38,20 +38,20 @@ const projects = [
   {
     title: "Portfolio",
     openSource: "true",
-    desc: "Personel website (version 2.0)",
+    desc: "Cumulative work experience, projects, blog posts, and bookmarks that I have shared constitute my personal website.",
     tech: ["Next.js", "TypeScript", "shadcn/ui"],
     link: "https://cemtatli.dev",
   },
   {
     title: "Shopla",
     openSource: "false",
-    desc: "This website teaches Redux Toolkit and Baklava Design in e-commerce.",
+    desc: "Developed an e-commerce website using Trendyol Baklava design, REST API, Tailwind, React, and Redux Toolkit.",
     tech: ["React", "RTK", "Trendyol Baklava Design"],
     link: "https://shopla.vercel.app/",
   },
   {
     title: "Secim Sayacı",
-    openSource: "false",
+    openSource: "true",
     desc: "It is a countdown application prepared for the Presidential and Local Elections of Turkey.",
     tech: ["React", "TypeScript", "Headless UI", "Context API"],
     link: "https://secimsayaci.vercel.app/",
@@ -59,7 +59,7 @@ const projects = [
   {
     title: "Frontendvideos",
     openSource: "true",
-    desc: "Jr compiles useful and instructive YouTube videos that can help frontend developers enter the industry.",
+    desc: "Provides Junior Frontend developers with useful and instructive YouTube videos that can help them break into the industry.",
     tech: ["React", "Headless UI", "Tailwind CSS"],
     link: "https://frontendvideos.vercel.app/",
   },
@@ -93,6 +93,10 @@ const projects = [
   },
 ];
 
+export const metadata = {
+  title: "Project",
+};
+
 const Project = () => {
   return (
     <section className="mb-5 mt-10">
@@ -111,7 +115,7 @@ const Project = () => {
             <TableRow key={p.title}>
               <TableCell className="font-medium">{p.title}</TableCell>
               <TableCell className="text-center ">{p.openSource === "true" ? "🟢" : ""}</TableCell>
-              <TableCell className="hidden max-w-prose truncate font-medium xs:block md:max-w-prose-xl">
+              <TableCell className="hidden max-w-prose pb-0 cursor-pointer truncate font-medium xs:block md:max-w-prose-xl">
                 <HoverCard>
                   <HoverCardTrigger>{p.desc}</HoverCardTrigger>
                   <HoverCardContent className="hidden w-full lg:block">{p.desc}</HoverCardContent>

@@ -15,60 +15,67 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import AvatarComponent from "@/components/avatar";
 
-const Contact = () => {
-  interface Link {
-    title: string;
-    icon: React.ReactNode;
-    href: string;
-  }
 
-  const links: Link[] = [
-    {
-      title: "Mail",
-      icon: <Mail width={20} />,
-      href: "mailto:cemtatli@protonmail.com",
-    },
-    {
-      title: "Twitter",
-      icon: <TwitterIcon width={20} />,
-      href: "https://www.twitter.com/vaycem",
-    },
-    {
-      title: "GitHub",
-      icon: <Github width={20} />,
-      href: "https://www.github.com/cemtatli",
-    },
-    {
-      title: "LinkedIn",
-      icon: <LinkedinIcon width={20} />,
-      href: "https://www.linkedin.com/in/cemtatli/",
-    },
-    {
-      title: "Codepen",
-      icon: <Codepen width={20} />,
-      href: "https://codepen.io/cemtatli",
-    },
-    {
-      title: "Medium",
-      icon: <BookOpen width={20} />,
-      href: "https://medium.com/@cemtatli",
-    },
-    {
-      title: "Bluesky",
-      icon: <Cloudy width={20} />,
-      href: "https://staging.bsky.app/profile/tatli.bsky.social",
-    },
-    {
-      title: "Discord",
-      icon: <Mic width={20} />,
-      href: "https://discord.com/users/vaycem",
-    },
-    {
-      title: "Spotify",
-      icon: <Headphones width={20} />,
-      href: "https://open.spotify.com/user/di1kgdass5is7rhxmu7mqzelc",
-    },
-  ];
+interface Link {
+  title: string;
+  icon: React.ReactNode;
+  href: string;
+}
+
+const links: Link[] = [
+  {
+    title: "Mail",
+    icon: <Mail width={20} />,
+    href: "mailto:cemtatli@protonmail.com",
+  },
+  {
+    title: "Twitter",
+    icon: <TwitterIcon width={20} />,
+    href: "https://www.twitter.com/vaycem",
+  },
+  {
+    title: "GitHub",
+    icon: <Github width={20} />,
+    href: "https://www.github.com/cemtatli",
+  },
+  {
+    title: "LinkedIn",
+    icon: <LinkedinIcon width={20} />,
+    href: "https://www.linkedin.com/in/cemtatli/",
+  },
+  {
+    title: "Codepen",
+    icon: <Codepen width={20} />,
+    href: "https://codepen.io/cemtatli",
+  },
+  {
+    title: "Medium",
+    icon: <BookOpen width={20} />,
+    href: "https://medium.com/@cemtatli",
+  },
+  {
+    title: "Bluesky",
+    icon: <Cloudy width={20} />,
+    href: "https://staging.bsky.app/profile/tatli.bsky.social",
+  },
+  {
+    title: "Discord",
+    icon: <Mic width={20} />,
+    href: "https://discord.com/users/vaycem",
+  },
+  {
+    title: "Spotify",
+    icon: <Headphones width={20} />,
+    href: "https://open.spotify.com/user/di1kgdass5is7rhxmu7mqzelc",
+  },
+];
+
+
+export const metadata = {
+  title: "Contact",
+};
+
+const Contact = () => {
 
   return (
     <section className="mb-5 mt-10">

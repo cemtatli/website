@@ -1,6 +1,10 @@
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+
+export const metadata = {
+  title: "Bookmarks",
+};
 const Bookmarks = () => {
   return (
     <section className="flex h-screen-64 items-center justify-center">

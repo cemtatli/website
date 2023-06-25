@@ -2,10 +2,6 @@ import React from "react";
 import { Separator } from "@/components/ui/separator";
 import AvatarComponent from "@/components/avatar";
 
-export const metadata = {
-  title: "About",
-};
-
 type Section = {
   title: string;
   emoji: string;
@@ -17,9 +13,16 @@ const sections: Section[] = [
   {
     title: "Career",
     emoji: "🎯",
-    year: "2023",
+    year: "",
     content:
       "As a Jr. Frontend Developer, my career goal is to level up, stay tech-savvy, and rock complex projects. I want to create user-friendly and jaw-dropping interfaces by keeping up with the latest web trends. I'm all about adapting to shiny new tech and staying in the loop.",
+  },
+  {
+    title: "Joined the mentee system - Sıfırdanbire",
+    emoji: "✅",
+    year: "2023",
+    content:
+      "I am happy to have joined and been selected for a program created by experienced individuals in the frontend field. It is an organization that provides guidance services by giving personalized programs and roadmaps.",
   },
   {
     title: "My journey of self-development",
@@ -56,6 +59,10 @@ const sections: Section[] = [
     content: "On the 24th of June.",
   },
 ];
+
+export const metadata = {
+  title: "About",
+};
 
 const About = () => {
   const uniqueYears: string[] = [];
@@ -94,7 +101,7 @@ const About = () => {
                     }`}
                   >
                     <div className="absolute inset-x-0 inset-y-2.5 mt-10 flex w-10 items-center justify-center">
-                      <div className="pointer-events-none h-full w-px border-l-2 border-dotted"></div>
+                      <div className="pointer-events-none h-full w-px border-l-2 "></div>
                     </div>
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-slate-50 align-middle">
                       <span role="img" aria-label={section.title}>

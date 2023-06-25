@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetClose, SheetContent, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
-import { Menu as MenuIcon } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { AlignJustify as MenuIcon } from "lucide-react";
 import { MenuContent } from "./menu-content";
 
 const SHEET_SIDES = ["left"] as const;

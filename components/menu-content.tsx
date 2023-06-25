@@ -21,7 +21,7 @@ import Link from "next/link";
 import React from "react";
 
 import { ThemeToggle } from "./theme-toggle";
-import DialogMenu from "./dialog-menu";
+import DialogMenu from "./settings-menu";
 
 export function MenuContent() {
   return (

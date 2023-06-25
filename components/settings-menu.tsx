@@ -1,9 +1,8 @@
+"use client";
+
 import React from "react";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -14,9 +13,18 @@ import {
 } from "./ui/alert-dialog";
 import { Separator } from "./ui/separator";
 import { CommandItem } from "./ui/command";
-import { Loader2, Settings } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Settings } from "lucide-react";
+import { Switch } from "./ui/switch";
+import { Label } from "./ui/label";
 
-const DialogMenu = () => {
+const SettingsMenu = () => {
+  const { setTheme, resolvedTheme } = useTheme();
+
+  const handleThemeChange = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  };
+
   return (
     <AlertDialog>
       <AlertDialogTrigger className="w-full">
@@ -29,9 +37,9 @@ const DialogMenu = () => {
         <AlertDialogHeader>
           <AlertDialogTitle className="text-base">Settings</AlertDialogTitle>
           <Separator className="my-2" />
-          <AlertDialogDescription className="flex items-center justify-start gap-x-2 pt-2">
-            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-            Not finished yet. Coming soon.
+          <AlertDialogDescription className="flex items-center justify-start gap-2 pt-2">
+            <Label className="capitalize">{resolvedTheme} Mod </Label>
+            <Switch checked={resolvedTheme === "dark"} onCheckedChange={handleThemeChange} />
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -42,4 +50,4 @@ const DialogMenu = () => {
   );
 };
 
-export default DialogMenu;
+export default SettingsMenu;
