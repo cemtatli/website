@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import Head from "next/head";
 import Wrapper from "@/components/layout/wrapper";
+import { Analytics } from '@vercel/analytics/react';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <Wrapper>{children}</Wrapper>
+          <Wrapper>{children} <Analytics /></Wrapper>
         </ThemeProvider>
       </body>
     </html>
