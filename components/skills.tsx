@@ -37,31 +37,26 @@ const Skills: React.FC = () => {
     { title: "Firebase", icon: SiFirebase },
     { title: "Redux Toolkit", icon: SiRedux },
     { title: "Git", icon: SiGit },
-    { title: "Figma", icon: SiFigma },
   ];
 
   return (
-    <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-5">
-      {techs.map((tech, index) => (
-        <Button key={index} variant="outline">
-          {tech.icon ? (
-            <>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger>
-                    {React.createElement(tech.icon, { className: "w-4 h-4 mr-2 shrink-0" })}
-                  </TooltipTrigger>
-                  <TooltipContent>{tech.title}</TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              {tech.title}
-            </>
-          ) : (
-            tech.title
-          )}
-        </Button>
-      ))}
-    </div>
+    <div className="mt-5 flex flex-col items-start gap-2.5">
+      <h3 className="font-semibold text-start">Techs & Tools</h3>
+      <div className="flex items-center justify-start gap-2.5 flex-wrap">
+        {techs.map((tech, index) => (
+          <Button key={index} className="rounded-lg" variant={'secondary'} size={'icon'}>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  {React.createElement(tech.icon, { className: "w-5 h-5 shrink-0" })}
+                </TooltipTrigger>
+                <TooltipContent>{tech.title}</TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </Button>
+        ))}
+      </div>
+    </div >
   );
 };
 

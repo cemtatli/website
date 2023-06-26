@@ -126,8 +126,8 @@ const Project = () => {
             <TableHead>Project</TableHead>
             <TableHead className="text-center" >Open Source</TableHead>
             <TableHead className="hidden xs:table-cell">Description</TableHead>
-            <TableHead>Link</TableHead>
-            <TableHead className="px-2 text-right">Link</TableHead>
+            <TableHead>GitHub</TableHead>
+            <TableHead className="px-2 text-right">Live</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -155,7 +155,7 @@ const Project = () => {
               </TableCell>
               <TableCell className="px-2 text-right">
                 <Link target={"_blank"} className="hover:underline " href={p.link}>
-                  Live
+                  Link
                 </Link>
               </TableCell>
             </TableRow>
