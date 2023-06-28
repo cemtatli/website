@@ -1,6 +1,11 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import AvatarComponent from "@/components/avatar";
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About',
+}
 
 type Section = {
   title: string;
@@ -60,9 +65,6 @@ const sections: Section[] = [
   },
 ];
 
-export const metadata = {
-  title: "About",
-};
 
 const About = () => {
   const uniqueYears: string[] = [];

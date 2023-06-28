@@ -1,5 +1,9 @@
 import React from 'react';
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'Curriculum vitae',
+}
 const CV = () => {
   return (
     <section className='w-full h-screen-64'>

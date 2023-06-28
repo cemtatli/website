@@ -2,10 +2,11 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
+import { Metadata } from 'next'
 
-export const metadata = {
-  title: "404 Not Found",
-};
+export const metadata: Metadata = {
+  title: '404',
+}
 
 const Error404 = () => {
   return (

@@ -147,7 +147,7 @@ const Project = () => {
                   </Badge>
                 ))}
               </TableCell>
-              <TableCell className="text-center" >{p.openSource === "true" ? "☑️" : ""}</TableCell>
+              <TableCell className="text-center" >{p.openSource === "true" ? '🟢' : ''}</TableCell>
               <TableCell>
                 <Link target={"_blank"} className="hover:underline" href={p.github}>
                   Repo

@@ -39,16 +39,16 @@ export function MenuContent() {
               <span>About</span>
             </CommandItem>
           </Link>
-          <Link href="/cv">
-            <CommandItem className="cursor-pointer">
-              <ScrollText className="mr-2 h-4 w-4" />
-              <span>CV</span>
-            </CommandItem>
-          </Link>
           <Link href="/projects">
             <CommandItem className="cursor-pointer">
               <FolderOpenDot className="mr-2 h-4 w-4" />
               <span>Projects</span>
+            </CommandItem>
+          </Link>
+          <Link href="/cv">
+            <CommandItem className="cursor-pointer">
+              <ScrollText className="mr-2 h-4 w-4" />
+              <span>CV</span>
             </CommandItem>
           </Link>
           <Link href="/contact">

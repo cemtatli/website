@@ -14,7 +14,11 @@ import {
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import AvatarComponent from "@/components/avatar";
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'Contact',
+}
 
 interface Link {
   title: string;
@@ -70,10 +74,6 @@ const links: Link[] = [
   },
 ];
 
-
-export const metadata = {
-  title: "Contact",
-};
 
 const Contact = () => {
 

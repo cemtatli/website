@@ -4,7 +4,8 @@ const nextConfig = {
   },
   images: {
     domains: ["img.icons8.com"]
-  }
+  },
+  productionBrowserSourceMaps: true
 };
 
 module.exports = nextConfig;
