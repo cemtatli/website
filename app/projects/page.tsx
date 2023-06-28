@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
+import { Skeleton } from "@/components/ui/skeleton";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -34,7 +34,7 @@ const projects = [
     title: "Meridian",
     openSource: "true",
     desc: "A Twitter-like social media application with a user-friendly interface, where people can share their ideas, thoughts, and interests.",
-    tech: ["React", "RTK", "Formik & Yup", "Firebase", "Tailwind CSS"],
+    tech: ["React", "Formik & Yup", "Firebase", "Tailwind CSS", 'i18n'],
     github: "https://github.com/cemtatli/Meridian",
     link: "https://meridian-social.vercel.app/",
   },
@@ -42,7 +42,7 @@ const projects = [
     title: "Portfolio",
     openSource: "true",
     desc: "Cumulative work experience, projects, blog posts, and bookmarks that I have shared constitute my personal website.",
-    tech: ["Next.js", "TypeScript", "shadcn/ui"],
+    tech: ["Next.js", "TypeScript", "shadcn/ui", 'REST API', 'Tailwind CSS'],
     github: "https://github.com/cemtatli/cemtatli.dev",
     link: "https://cemtatli.dev",
   },
@@ -58,17 +58,17 @@ const projects = [
     title: "Secim Sayacı",
     openSource: "true",
     desc: "It is a countdown application prepared for the Presidential and Local Elections of Turkey.",
-    tech: ["React", "TypeScript", "Headless UI", "Context API"],
+    tech: ["React", "TypeScript", "Headless UI", "Context API", 'REST API'],
     github: "https://github.com/cemtatli/secimsayaci",
     link: "https://secimsayaci.vercel.app/",
   },
   {
     title: "Quiz App",
-    openSource: "true",
-    desc: "It is a countdown application prepared for the Presidential and Local Elections of Turkey.",
+    openSource: "false",
+    desc: "A random number of 5 questions are displayed out of 20 questions based on varying levels of difficulty. In questions with 4 options, the user can use the hint option. The result is shown at the end of the quiz.",
     tech: ["HTML", "SCSS", "JavaScript",],
-    github: "https://github.com/cemtatli/quiz-app",
-    link: "https://quiz-app-cemtatli.vercel.app/",
+    github: "https://github.com/cemtatli/quizle",
+    link: "https://sifirdanbire-quizapp.vercel.app/",
   },
   {
     title: "Frontendvideos",
@@ -123,9 +123,9 @@ const Project = () => {
         <TableCaption>A list of your recent projects.</TableCaption>
         <TableHeader>
           <TableRow className="text-left">
-            <TableHead>Project</TableHead>
+            <TableHead >Project</TableHead>
+            <TableHead className="hidden sm:table-cell">Description</TableHead>
             <TableHead className="text-center" >Open Source</TableHead>
-            <TableHead className="hidden xs:table-cell">Description</TableHead>
             <TableHead>GitHub</TableHead>
             <TableHead className="px-2 text-right">Live</TableHead>
           </TableRow>
@@ -133,9 +133,8 @@ const Project = () => {
         <TableBody>
           {projects.map((p) => (
             <TableRow key={p.title}>
-              <TableCell className="font-medium text-left">{p.title}</TableCell>
-              <TableCell className="text-center" >{p.openSource === "true" ? "🟢" : ""}</TableCell>
-              <TableCell className="hidden max-w-prose pb-0 cursor-pointer truncate font-medium xs:block md:max-w-prose-xl">
+              <TableCell className="font-medium text-left pr-0 ">{p.title}</TableCell>
+              <TableCell className="hidden max-w-prose pb-0 cursor-pointer truncate font-medium sm:block md:max-w-prose-xl">
                 <HoverCard>
                   <HoverCardTrigger>{p.desc}</HoverCardTrigger>
                   <HoverCardContent className="hidden w-full lg:block">{p.desc}</HoverCardContent>
@@ -148,13 +147,14 @@ const Project = () => {
                   </Badge>
                 ))}
               </TableCell>
-              <TableCell className="">
-                <Link target={"_blank"} className="hover:underline " href={p.github}>
+              <TableCell className="text-center" >{p.openSource === "true" ? "☑️" : ""}</TableCell>
+              <TableCell>
+                <Link target={"_blank"} className="hover:underline" href={p.github}>
                   Repo
                 </Link>
               </TableCell>
               <TableCell className="px-2 text-right">
-                <Link target={"_blank"} className="hover:underline " href={p.link}>
+                <Link target={"_blank"} className="hover:underline" href={p.link}>
                   Link
                 </Link>
               </TableCell>

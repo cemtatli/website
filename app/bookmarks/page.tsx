@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -19,6 +20,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/h
 
 
 
+
 const Bookmarks = () => {
   const [bookmarks, setBookmarks] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,12 +29,12 @@ const Bookmarks = () => {
     const API_KEY = process.env.RAINDROP_API_KEY || '';
     getRaindropBookmarks(API_KEY)
       .then((data) => {
+        console.log(data);
         const sortedBookmarks = data.sort((a, b) => {
           const dateA = new Date(a.creationDate).getTime();
           const dateB = new Date(b.creationDate).getTime();
           return dateB - dateA;
         });
-
         setBookmarks(sortedBookmarks);
         setLoading(false);
       })
@@ -55,16 +57,16 @@ const Bookmarks = () => {
         </TableHeader>
         <TableBody>
           {loading ? (
-            Array.from({ length: 10 }, (_, index) => (
+            Array.from({ length: 12 }, (_, index) => (
               <TableRow key={index}>
-                <TableCell>
-                  <Skeleton className='h-6 ' />
+                <TableCell className='w-full md:w-[20%]'>
+                  <Skeleton className='h-8' />
+                </TableCell>
+                <TableCell className='hidden md:table-cell w-[80%]'>
+                  <Skeleton className='h-8' />
                 </TableCell>
                 <TableCell>
-                  <Skeleton className='h-6' />
-                </TableCell>
-                <TableCell>
-                  <Skeleton className='h-6' />
+                  <Skeleton className='h-8 w-20  ml-auto' />
                 </TableCell>
               </TableRow>
             ))
@@ -82,8 +84,8 @@ const Bookmarks = () => {
                     <HoverCardContent className="hidden w-full md:block">{bookmark.description}</HoverCardContent>
                   </HoverCard>
                 </TableCell>
-
-                <TableCell className='text-right'>{formatCreationDate(bookmark.creationDate)}</TableCell>
+                <TableCell className='text-right'>{formatCreationDate(bookmark.creationDate)}
+                </TableCell>
               </TableRow>
             ))
           )}

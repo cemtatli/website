@@ -19,7 +19,7 @@ const sections: Section[] = [
   },
   {
     title: "Joined the mentee system - Sıfırdanbire",
-    emoji: "✅",
+    emoji: "📍",
     year: "2023",
     content:
       "I am happy to have joined and been selected for a program created by experienced individuals in the frontend field. It is an organization that provides guidance services by giving personalized programs and roadmaps.",
@@ -40,7 +40,7 @@ const sections: Section[] = [
   },
   {
     title: "Graduated from university",
-    emoji: "🎒",
+    emoji: "🧑🏻‍🎓",
     year: "2022",
     content:
       "I graduated from the Management Information Systems department. During my university years, I worked on projects in various programming languages such as Python, PHP (Joomla), Flutter, and Kotlin.",
@@ -96,12 +96,11 @@ const About = () => {
                 .map((section, index) => (
                   <div
                     key={index}
-                    className={`relative flex pb-8 ${
-                      index === sections.length - 1 ? "last:pb-0" : ""
-                    }`}
+                    className={`relative flex pb-8 ${index === sections.length - 1 ? "last:pb-0" : ""
+                      }`}
                   >
                     <div className="absolute inset-x-0 inset-y-2.5 mt-10 flex w-10 items-center justify-center">
-                      <div className="pointer-events-none h-full w-px border-l-2 "></div>
+                      <Separator orientation="vertical" className="w-[2px]" />
                     </div>
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-slate-50 align-middle">
                       <span role="img" aria-label={section.title}>

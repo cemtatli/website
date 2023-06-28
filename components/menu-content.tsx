@@ -5,8 +5,8 @@ import {
   Inspect,
   FolderOpenDot,
   PenTool,
+  ScrollText
 } from "lucide-react";
-
 import {
   Command,
   CommandEmpty,
@@ -16,11 +16,8 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-
 import Link from "next/link";
 import React from "react";
-
-import { ThemeToggle } from "./theme-toggle";
 import DialogMenu from "./settings-menu";
 
 export function MenuContent() {
@@ -29,7 +26,7 @@ export function MenuContent() {
       <CommandInput placeholder="Search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
+        <CommandGroup>
           <Link href="/">
             <CommandItem className="cursor-pointer">
               <Inspect className="mr-2 h-4 w-4" />
@@ -42,7 +39,13 @@ export function MenuContent() {
               <span>About</span>
             </CommandItem>
           </Link>
-          <Link href="/project">
+          <Link href="/cv">
+            <CommandItem className="cursor-pointer">
+              <ScrollText className="mr-2 h-4 w-4" />
+              <span>CV</span>
+            </CommandItem>
+          </Link>
+          <Link href="/projects">
             <CommandItem className="cursor-pointer">
               <FolderOpenDot className="mr-2 h-4 w-4" />
               <span>Projects</span>

@@ -69,13 +69,10 @@ module.exports = {
         "screen-64": "calc(100vh - 4rem)"
       },
       maxWidth: {
-        prose: "20ch",
+        prose: "24ch",
         "prose-lg": "40ch",
         "prose-xl": "100ch"
       },
-      screens: {
-        xs: "450px"
-      }
     }
   },
   plugins: [require("tailwindcss-animate"), "tailwind-scrollbar"]

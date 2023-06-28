@@ -3,7 +3,7 @@ const nextConfig = {
     RAINDROP_API_KEY: process.env.RAINDROP_API_KEY
   },
   images: {
-    domains: ["https://app.raindrop.io/"]
+    domains: ["img.icons8.com"]
   }
 };
 
