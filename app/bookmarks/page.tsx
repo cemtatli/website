@@ -19,9 +19,6 @@ import { formatCreationDate } from '@/utils/date';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Bookmarks',
-}
 
 const Bookmarks = () => {
   const [bookmarks, setBookmarks] = useState<any[]>([]);
