@@ -1,6 +1,9 @@
+'use client'
+
 import Skills from "@/components/skills";
 import { Separator } from "@/components/ui/separator";
 import { Metadata } from 'next'
+import { motion } from "framer-motion";
 
 export const metadata: Metadata = {
   title: 'Homepage',
@@ -9,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="mt-10 mb-5 flex-col flex gap-8">
+    <motion.section initial={{ opacity: 0, translateY: 15 }} animate={{ opacity: 1, translateY: 0 }} className="mt-10 mb-5 flex-col flex gap-8">
       <div className="flex flex-col gap-4">
         <h1 className="font-semibold text-center text-4xl md:text-6xl md:text-left">
           Frontend Developer
@@ -18,6 +21,6 @@ export default function Home() {
         <span>A frontend developer who is interested in technological developments and always strives to improve himself.</span>
       </div>
       <Skills />
-    </section >
+    </motion.section >
   );
 }

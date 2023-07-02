@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -17,7 +16,7 @@ import Link from "next/link";
 import getRaindropBookmarks from '@/utils/getRaindropBookmarks';
 import { formatCreationDate } from '@/utils/date';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
-import { Metadata } from 'next'
+import { motion } from "framer-motion";
 
 
 const Bookmarks = () => {
@@ -44,7 +43,9 @@ const Bookmarks = () => {
   }, []);
 
   return (
-    <section className="mb-5 mt-10">
+
+
+    <motion.section initial={{ opacity: 0, translateY: 15 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
       <Table className="table-auto">
         <TableCaption>A list of your recent bookmarks.</TableCaption>
         <TableHeader>
@@ -90,7 +91,8 @@ const Bookmarks = () => {
           )}
         </TableBody>
       </Table>
-    </section>
+    </motion.section>
+
   );
 };
 

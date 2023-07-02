@@ -81,10 +81,6 @@
   @apply w-2;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-background;
-}
-
 ::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-foreground/20;
+  @apply rounded-xl bg-foreground/25;
 }

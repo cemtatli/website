@@ -32,11 +32,11 @@ const SettingsMenu = () => {
           <span>Settings</span>
         </CommandItem>
       </AlertDialogTrigger>
-      <AlertDialogContent className="w-11/12 rounded-md p-4">
+      <AlertDialogContent className="w-11/12 rounded-md p-3 md:p-5">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-base">Settings</AlertDialogTitle>
           <Separator className="my-2" />
-          <AlertDialogDescription className="flex flex-col items-start justify-center gap-4 pt-2 ">
+          <AlertDialogDescription className="flex flex-col items-start justify-center gap-4 pt-2">
             <GitHubInfo />
             <Separator />
             <div className="flex items-center justify-center gap-2">

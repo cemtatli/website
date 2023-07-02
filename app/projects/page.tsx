@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import {
   Table,
@@ -8,10 +10,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Skeleton } from "@/components/ui/skeleton";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -118,7 +120,7 @@ export const metadata = {
 
 const Project = () => {
   return (
-    <section className="mb-5 mt-10">
+    <motion.section initial={{ opacity: 0, translateY: 25 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
       <Table className="table-auto">
         <TableCaption>A list of your recent projects.</TableCaption>
         <TableHeader>
@@ -162,7 +164,7 @@ const Project = () => {
           ))}
         </TableBody>
       </Table>
-    </section>
+    </motion.section>
   );
 };
 
