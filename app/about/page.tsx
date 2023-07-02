@@ -3,12 +3,8 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import AvatarComponent from "@/components/avatar";
-import { Metadata } from 'next'
 import { motion } from "framer-motion";
 
-export const metadata: Metadata = {
-  title: 'About',
-}
 
 type Section = {
   title: string;

@@ -114,9 +114,6 @@ const projects = [
   },
 ];
 
-export const metadata = {
-  title: "Project",
-};
 
 const Project = () => {
   return (
