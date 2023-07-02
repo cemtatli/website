@@ -88,7 +88,7 @@ const Contact = () => {
       </div>
       <Separator className="my-4" />
       <div className="col-span-2 grid text-sm">
-        <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
           {links.map((link, index) => (
             <Link
               className={buttonVariants({ variant: "outline" })}
