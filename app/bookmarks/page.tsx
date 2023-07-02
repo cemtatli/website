@@ -45,7 +45,7 @@ const Bookmarks = () => {
   return (
 
 
-    <motion.section initial={{ opacity: 0, translateY: 15 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
+    <motion.section initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
       <Table className="table-auto">
         <TableCaption>A list of your recent bookmarks.</TableCaption>
         <TableHeader>

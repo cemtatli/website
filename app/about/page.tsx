@@ -74,7 +74,7 @@ const About = () => {
   });
 
   return (
-    <motion.section initial={{ opacity: 0, translateY: 15 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
+    <motion.section initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
       <div className="flex gap-2.5">
         <AvatarComponent />
         <div className="flex flex-col space-y-1.5">

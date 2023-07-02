@@ -1,3 +1,5 @@
+'use client';
+
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 import {
@@ -14,11 +16,7 @@ import {
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import AvatarComponent from "@/components/avatar";
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Contact',
-}
+import { motion } from "framer-motion";
 
 interface Link {
   title: string;
@@ -78,7 +76,7 @@ const links: Link[] = [
 const Contact = () => {
 
   return (
-    <section className="mb-5 mt-10">
+    <motion.section initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
       <div className="flex gap-2.5">
         <AvatarComponent />
         <div className="flex flex-col space-y-1.5">
@@ -106,7 +104,7 @@ const Contact = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

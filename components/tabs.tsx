@@ -17,6 +17,8 @@ const Navtabs = () => {
       <Link href={'/blog'}>Blog</Link>
       <Separator orientation="vertical" />
       <Link href={'/cv'}>CV</Link>
+      <Separator orientation="vertical" />
+      <Link href={'/contact'}>Contact</Link>
     </div>
   )
 }
