@@ -32,6 +32,7 @@ const Skills = () => {
         { title: "Redux Toolkit", icon: "https://img.icons8.com/color/128/redux.png" },
         { title: "Styled Components", icon: "https://img.icons8.com/color/128/styled-components.png" },
         { title: "Bootstrap", icon: "https://img.icons8.com/color/128/bootstrap.png" },
+        { title: "Vite", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1039px-Vitejs-logo.svg.png" },
       ],
     },
   ];
@@ -40,18 +41,18 @@ const Skills = () => {
     <div className="mt-5 flex flex-col items-start gap-4">
       {techs.map((category, index) => (
         <div key={index}>
-          <h3 className="uppercase font-medium text-start text-sm">
+          <span className="uppercase font-medium text-start text-sm">
             {category.title}
-          </h3>
+          </span>
           <div className="grid grid-cols-5 gap-4 my-2 md:flex md:flex-wrap">
             {category.technologies.map((tech, techIndex) => (
               <HoverCard key={techIndex}>
                 <HoverCardTrigger>
-                  <Button variant="outline" size={'default'}>
-                    <Image src={tech.icon} aria-label={tech.title} alt={tech.title} width={24} height={24} />
+                  <Button aria-label={tech.title} variant="outline">
+                    <Image src={tech.icon} aria-label={tech.title} alt={tech.title} className="shrink-0" width={24} height={24} />
                   </Button>
                 </HoverCardTrigger>
-                <HoverCardContent className="!w-fit py-1.5 text-sm">
+                <HoverCardContent className="!w-fit py-1.5 px-3 text-sm">
                   {tech.title}
                 </HoverCardContent>
               </HoverCard>

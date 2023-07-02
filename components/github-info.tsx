@@ -26,16 +26,16 @@ const GitHubInfo = () => {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center w-full md:justify-start gap-2">
+    <span className="flex flex-col justify-center w-full md:justify-start gap-2">
       <Link href={'https://github.com/cemtatli/cemtatli.dev'} className="font-semibold hover:underline">Contribute to the project</Link>
-      <div className="flex items-center justify-center md:justify-start gap-5 mt-2">
-        <span className="text-sm flex items-center gap-1.5">{` Starred  ${starCount}`} <Star className='w-4' /> </span>
-        <Separator orientation="vertical" />
-        <span className="text-sm flex items-center gap-1.5">{` Fork  ${forkCount}`} <GitFork className='w-4' /> </span>
-        <Separator orientation="vertical" />
-        <span className="text-sm flex items-center gap-1.5">{` Watchers  ${watcherCount}`} <Eye className='w-4' /> </span>
-      </div>
-    </section>
+      <span className="flex items-center justify-center md:justify-start gap-5 mt-2">
+        <span className="text-sm flex items-center gap-1.5">{` Starred  ${starCount}`} <Star className='hidden xxs:block w-4' /> </span>
+        <span data-orientation="vertical" role="none" className="shrink-0 bg-border h-full w-[1px]"></span>
+        <span className="text-sm flex items-center gap-1.5">{` Fork  ${forkCount}`} <GitFork className='hidden xxs:block w-4' /> </span>
+        <span data-orientation="vertical" role="none" className="shrink-0 bg-border h-full w-[1px]"></span>
+        <span className="text-sm flex items-center gap-1.5">{` Watchers  ${watcherCount}`} <Eye className='hidden xxs:block w-4' /> </span>
+      </span>
+    </span>
   )
 }
 

@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}"
+  ],
   theme: {
     container: {
       center: true,
@@ -73,6 +78,9 @@ module.exports = {
         "prose-lg": "40ch",
         "prose-xl": "100ch"
       },
+      screens: {
+        xxs: "340px"
+      }
     }
   },
   plugins: [require("tailwindcss-animate"), "tailwind-scrollbar"]
