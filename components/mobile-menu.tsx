@@ -11,7 +11,7 @@ type MobileMenu = (typeof SHEET_SIDES)[number];
 
 export function MobileMenu() {
   return (
-    <>
+    <div className="md:hidden">
       {SHEET_SIDES.map((side) => (
         <Sheet key={side}>
           <SheetTrigger asChild>
@@ -24,6 +24,6 @@ export function MobileMenu() {
           </SheetContent>
         </Sheet>
       ))}
-    </>
+    </div>
   );
 }

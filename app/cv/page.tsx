@@ -1,14 +1,12 @@
-import React from 'react';
-import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Curriculum vitae',
-}
+import React from 'react';
+
+
 const CV = () => {
   return (
     <section className='w-full h-screen-64'>
       <iframe
-        src='https://drive.google.com/file/d/1EibevN4i3XNhcmjujsKFjAjYcZu01Kbp/preview'
+        src={process.env.CV_LINK}
         title='CV'
         className='w-full h-full'
       />
