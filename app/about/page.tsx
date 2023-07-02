@@ -103,7 +103,7 @@ const About = () => {
                     <div className="absolute inset-x-0 inset-y-2.5 mt-10 flex w-10 items-center justify-center">
                       <Separator orientation="vertical" className="w-[2px]" />
                     </div>
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-slate-50 align-middle">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center shadow-md justify-center rounded-full bg-slate-50 align-middle">
                       <span role="img" aria-label={section.title}>
                         {section.emoji}
                       </span>
