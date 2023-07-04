@@ -27,7 +27,6 @@ const Bookmarks = () => {
     const API_KEY = process.env.RAINDROP_API_KEY || '';
     getRaindropBookmarks(API_KEY)
       .then((data) => {
-        console.log(data);
         const sortedBookmarks = data.sort((a, b) => {
           const dateA = new Date(a.creationDate).getTime();
           const dateB = new Date(b.creationDate).getTime();
@@ -41,10 +40,7 @@ const Bookmarks = () => {
         setLoading(false);
       });
   }, []);
-
   return (
-
-
     <motion.section initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
       <Table className="table-auto">
         <TableCaption>A list of your recent bookmarks.</TableCaption>
@@ -60,13 +56,13 @@ const Bookmarks = () => {
             Array.from({ length: 12 }, (_, index) => (
               <TableRow key={index}>
                 <TableCell className='w-full md:w-[20%]'>
-                  <Skeleton className='h-8' />
+                  <Skeleton className='h-6' />
                 </TableCell>
                 <TableCell className='hidden md:table-cell w-[80%]'>
-                  <Skeleton className='h-8' />
+                  <Skeleton className='h-6' />
                 </TableCell>
                 <TableCell>
-                  <Skeleton className='h-8 w-20  ml-auto' />
+                  <Skeleton className='h-6 w-20  ml-auto' />
                 </TableCell>
               </TableRow>
             ))
@@ -92,7 +88,6 @@ const Bookmarks = () => {
         </TableBody>
       </Table>
     </motion.section>
-
   );
 };
 
