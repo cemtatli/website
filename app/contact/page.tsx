@@ -1,6 +1,5 @@
-'use client';
+"use client";
 
-import { Separator } from "@/components/ui/separator";
 import React from "react";
 import {
   Github,
@@ -11,72 +10,70 @@ import {
   Mic,
   Headphones,
   BookOpen,
-  Cloudy,
+  Cloudy
 } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import AvatarComponent from "@/components/avatar";
 import { motion } from "framer-motion";
+import { Link as LinkTypes } from "@/types";
 
-interface Link {
-  title: string;
-  icon: React.ReactNode;
-  href: string;
-}
-
-const links: Link[] = [
+const links: LinkTypes[] = [
   {
     title: "Mail",
     icon: <Mail width={20} />,
-    href: "mailto:cemtatli@protonmail.com",
+    href: "mailto:cemtatli@protonmail.com"
   },
   {
     title: "Twitter",
     icon: <TwitterIcon width={20} />,
-    href: "https://www.twitter.com/vaycem",
+    href: "https://www.twitter.com/vaycem"
   },
   {
     title: "GitHub",
     icon: <Github width={20} />,
-    href: "https://www.github.com/cemtatli",
+    href: "https://www.github.com/cemtatli"
   },
   {
     title: "LinkedIn",
     icon: <LinkedinIcon width={20} />,
-    href: "https://www.linkedin.com/in/cemtatli/",
+    href: "https://www.linkedin.com/in/cemtatli/"
   },
   {
     title: "Codepen",
     icon: <Codepen width={20} />,
-    href: "https://codepen.io/cemtatli",
+    href: "https://codepen.io/cemtatli"
   },
   {
     title: "Medium",
     icon: <BookOpen width={20} />,
-    href: "https://medium.com/@cemtatli",
+    href: "https://medium.com/@cemtatli"
   },
   {
     title: "Bluesky",
     icon: <Cloudy width={20} />,
-    href: "https://staging.bsky.app/profile/tatli.bsky.social",
+    href: "https://staging.bsky.app/profile/tatli.bsky.social"
   },
   {
     title: "Discord",
     icon: <Mic width={20} />,
-    href: "https://discord.com/users/vaycem",
+    href: "https://discord.com/users/vaycem"
   },
   {
     title: "Spotify",
     icon: <Headphones width={20} />,
-    href: "https://open.spotify.com/user/di1kgdass5is7rhxmu7mqzelc",
-  },
+    href: "https://open.spotify.com/user/di1kgdass5is7rhxmu7mqzelc"
+  }
 ];
 
-
 const Contact = () => {
-
   return (
-    <motion.section initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
+    <motion.section
+      initial={{ opacity: 0, translateY: 20 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      className="mb-5 mt-10"
+    >
       <div className="flex gap-2.5">
         <AvatarComponent />
         <div className="flex flex-col space-y-1.5">

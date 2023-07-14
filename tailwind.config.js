@@ -71,7 +71,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out"
       },
       height: {
-        "screen-64": "calc(100vh - 4rem)"
+        "screen-fit": "calc(100vh - 3rem)"
       },
       maxWidth: {
         prose: "24ch",

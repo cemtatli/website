@@ -1,29 +1,23 @@
 "use client";
 
+import { AlignJustify as MenuIcon } from "lucide-react";
+import { MenuContent } from "@/components/menu-content";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { AlignJustify as MenuIcon } from "lucide-react";
-import { MenuContent } from "./menu-content";
-
-const SHEET_SIDES = ["left"] as const;
-
-type MobileMenu = (typeof SHEET_SIDES)[number];
 
 export function MobileMenu() {
   return (
-    <div className="md:hidden">
-      {SHEET_SIDES.map((side) => (
-        <Sheet key={side}>
-          <SheetTrigger asChild>
-            <Button aria-label="mobile-menu" size={"icon"} variant="ghost">
-              <MenuIcon />
-            </Button>
-          </SheetTrigger>
-          <SheetContent className="border-r" side={side}>
-            <MenuContent />
-          </SheetContent>
-        </Sheet>
-      ))}
+    <div className="block md:hidden">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button aria-label="mobile-menu" size={"icon"} variant="ghost">
+            <MenuIcon strokeWidth={1.5} className="h-5 w-5" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side={"left"}>
+          <MenuContent />
+        </SheetContent>
+      </Sheet>
     </div>
   );
 }

@@ -14,11 +14,11 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
+  CommandSeparator
 } from "@/components/ui/command";
 import Link from "next/link";
 import React from "react";
-import DialogMenu from "./settings-menu";
+import DialogMenu from "@/components/settings-menu";
 
 export function MenuContent() {
   return (

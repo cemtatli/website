@@ -7,7 +7,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
+  AlertDialogTrigger
 } from "./ui/alert-dialog";
 import { Separator } from "./ui/separator";
 import { CommandItem } from "./ui/command";
@@ -19,7 +19,6 @@ import GitHubInfo from "./github-info";
 const SettingsMenu = () => {
   const { setTheme, resolvedTheme } = useTheme();
 
-
   const handleThemeChange = () => {
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
@@ -29,25 +28,23 @@ const SettingsMenu = () => {
       <AlertDialogTrigger className="w-full">
         <CommandItem className="cursor-pointer">
           <Settings className="mr-2 h-4 w-4" />
-          <span>Settings</span>
+          <p>Settings</p>
         </CommandItem>
       </AlertDialogTrigger>
       <AlertDialogContent className="w-11/12 rounded-md p-3 md:p-5">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-base">Settings</AlertDialogTitle>
           <Separator className="my-2" />
-          <AlertDialogDescription className="flex flex-col items-start justify-center gap-4 pt-2">
+          <div className="flex flex-col items-start justify-center gap-4 pt-2">
             <GitHubInfo />
             <Separator />
             <div className="flex items-center justify-center gap-2">
-              <span className="capitalize">{resolvedTheme} Mode </span>
+              <p className="text-sm capitalize">{resolvedTheme} Mode</p>
               <Switch checked={resolvedTheme === "dark"} onCheckedChange={handleThemeChange} />
             </div>
-          </AlertDialogDescription>
+          </div>
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Close</AlertDialogCancel>
-        </AlertDialogFooter>
+        <AlertDialogCancel>Close</AlertDialogCancel>
       </AlertDialogContent>
     </AlertDialog>
   );
