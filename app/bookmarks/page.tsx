@@ -1,32 +1,21 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import React from "react";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { Skeleton } from "@/components/ui/skeleton";
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import getRaindropBookmarks from '@/utils/getRaindropBookmarks';
-import { formatCreationDate } from '@/utils/date';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import getRaindropBookmarks from "@/utils/getRaindropBookmarks";
+import { formatCreationDate } from "@/utils";
 import { motion } from "framer-motion";
-
+import { Skeleton } from "@/components/ui/skeleton";
+import { Badge } from "@/components/ui/badge";
 
 const Bookmarks = () => {
   const [bookmarks, setBookmarks] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const API_KEY = process.env.RAINDROP_API_KEY || '';
+    const API_KEY = process.env.RAINDROP_API_KEY || "";
     getRaindropBookmarks(API_KEY)
-      .then((data) => {
+      .then(data => {
         const sortedBookmarks = data.sort((a, b) => {
           const dateA = new Date(a.creationDate).getTime();
           const dateB = new Date(b.creationDate).getTime();
@@ -35,58 +24,58 @@ const Bookmarks = () => {
         setBookmarks(sortedBookmarks);
         setLoading(false);
       })
-      .catch((error) => {
-        console.error('Error retrieving bookmarks:', error);
+      .catch(error => {
+        console.error("Error retrieving bookmarks:", error);
         setLoading(false);
       });
   }, []);
+
   return (
-    <motion.section initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} className="mb-5 mt-10">
-      <Table className="table-auto">
-        <TableCaption>A list of your recent bookmarks.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Title</TableHead>
-            <TableHead className='hidden md:table-cell'>Description</TableHead>
-            <TableHead className='text-right'>Creation Date</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {loading ? (
-            Array.from({ length: 12 }, (_, index) => (
-              <TableRow key={index}>
-                <TableCell className='w-full md:w-[20%]'>
-                  <Skeleton className='h-6' />
-                </TableCell>
-                <TableCell className='hidden md:table-cell w-[80%]'>
-                  <Skeleton className='h-6' />
-                </TableCell>
-                <TableCell>
-                  <Skeleton className='h-6 w-20  ml-auto' />
-                </TableCell>
-              </TableRow>
+    <motion.section
+      initial={{ opacity: 0, translateY: 20 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      className="mb-5 mt-10"
+    >
+      <div className="grid grid-flow-dense grid-cols-1 grid-rows-[masonry] gap-8 leading-4 sm:grid-cols-2 xl:grid-cols-4">
+        {loading
+          ? Array.from({ length: 15 }, (_, index) => (
+              <div
+                key={index}
+                className="overflow-hidden rounded-lg odd:sm:col-span-2 first:xl:col-start-2"
+              >
+                <Skeleton className="h-48 w-full" />
+                <Skeleton className="mt-4" />
+                <Skeleton className="text-right" />
+              </div>
             ))
-          ) : (
-            bookmarks.map((bookmark, index) => (
-              <TableRow key={index}>
-                <TableCell className='max-w-prose truncate'>
-                  <Link target={"_blank"} className="hover:underline" href={bookmark.url}>
-                    {bookmark.title}
+          : bookmarks.map((bookmark, index) => (
+              <div
+                key={index}
+                className="overflow-hidden rounded-lg border dark:border-none odd:sm:col-span-2 first:xl:col-start-2"
+              >
+                {bookmark.cover ? (
+                  <Link target="_blank" href={bookmark.url}>
+                    <img
+                      className="h-48 w-full cursor-pointer rounded-lg object-cover"
+                      src={bookmark.cover}
+                      alt={bookmark.title}
+                    />
                   </Link>
-                </TableCell>
-                <TableCell className="hidden pb-0 cursor-pointer max-w-prose-lg truncate md:block lg:max-w-prose-xl">
-                  <HoverCard>
-                    <HoverCardTrigger>{bookmark.description}</HoverCardTrigger>
-                    <HoverCardContent className="hidden w-full md:block">{bookmark.description}</HoverCardContent>
-                  </HoverCard>
-                </TableCell>
-                <TableCell className='text-right'>{formatCreationDate(bookmark.creationDate)}
-                </TableCell>
-              </TableRow>
-            ))
-          )}
-        </TableBody>
-      </Table>
+                ) : (
+                  <div className="h-48 w-full rounded" />
+                )}
+                <div className="flex flex-col items-start justify-center gap-4 p-2">
+                  <div className="mt-2 inline-flex w-full flex-col items-center justify-between gap-2.5 md:flex-row">
+                    <h2 className="self-start text-base font-semibold">{bookmark.title}</h2>
+                    <Badge variant={"outline"} className="shrink-0 self-start">
+                      {formatCreationDate(bookmark.creationDate)}
+                    </Badge>
+                  </div>
+                  <span className="text-sm">{bookmark?.description}</span>
+                </div>
+              </div>
+            ))}
+      </div>
     </motion.section>
   );
 };

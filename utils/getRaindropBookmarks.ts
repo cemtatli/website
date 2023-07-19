@@ -7,6 +7,7 @@ interface Bookmark {
   url: string;
   cover: any;
   tags: string[];
+  note: string;
 }
 
 async function getRaindropBookmarks(API_KEY: string): Promise<Bookmark[]> {
@@ -22,7 +23,8 @@ async function getRaindropBookmarks(API_KEY: string): Promise<Bookmark[]> {
     creationDate: item.created,
     url: item.link,
     cover: item.cover,
-    tags: item.tags
+    tags: item.tags,
+    note: item.note
   }));
 }
 

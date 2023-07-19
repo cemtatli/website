@@ -23,7 +23,7 @@ export function ThemeToggle() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="min-w-[6.5rem] text-xs font-medium sm:text-sm" align="center">
+      <DropdownMenuContent className="min-w-[6rem] text-xs font-medium sm:text-sm" align="center">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <SunMoonIcon aria-label={"theme"} size={16} className="mr-2" /> Light
         </DropdownMenuItem>
