@@ -7,6 +7,7 @@ const Navtabs = () => {
       <Link href={"/projects"}>Projects</Link>
       <Link href={"/bookmarks"}>Bookmarks</Link>
       <Link href={"/blog"}>Blog</Link>
+      <Link href={"/cv"}>CV</Link>
       <Link href={"/contact"}>Contact</Link>
     </div>
   );
