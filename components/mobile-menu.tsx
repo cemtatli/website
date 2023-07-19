@@ -1,7 +1,26 @@
 "use client";
 
 import { AlignJustify as MenuIcon } from "lucide-react";
-import { MenuContent } from "@/components/menu-content";
+import {
+  ExternalLink as LinkIcon,
+  User2,
+  Bookmark,
+  Inspect,
+  FolderOpenDot,
+  PenTool
+} from "lucide-react";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator
+} from "@/components/ui/command";
+import Link from "next/link";
+import React from "react";
+import SettingsMenu from "@/components/settings-menu";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -15,7 +34,54 @@ export function MobileMenu() {
           </Button>
         </SheetTrigger>
         <SheetContent side={"left"}>
-          <MenuContent />
+          <Command>
+            <CommandInput placeholder="Search..." />
+            <CommandList>
+              <CommandEmpty>No results found.</CommandEmpty>
+              <CommandGroup>
+                <Link href="/">
+                  <CommandItem className="cursor-pointer">
+                    <Inspect className="mr-2 h-4 w-4" />
+                    <span>Home</span>
+                  </CommandItem>
+                </Link>
+                <Link href="/about">
+                  <CommandItem className="cursor-pointer">
+                    <User2 className="mr-2 h-4 w-4" />
+                    <span>About</span>
+                  </CommandItem>
+                </Link>
+                <Link href="/projects">
+                  <CommandItem className="cursor-pointer">
+                    <FolderOpenDot className="mr-2 h-4 w-4" />
+                    <span>Projects</span>
+                  </CommandItem>
+                </Link>
+                <Link href={"/bookmarks"}>
+                  <CommandItem className="cursor-pointer">
+                    <Bookmark className="mr-2 h-4 w-4" />
+                    <span>Bookmarks</span>
+                  </CommandItem>
+                </Link>
+                <Link href="/contact">
+                  <CommandItem className="cursor-pointer">
+                    <LinkIcon className="mr-2 h-4 w-4" />
+                    <span>Contact</span>
+                  </CommandItem>
+                </Link>
+              </CommandGroup>
+              <CommandSeparator />
+              <CommandGroup heading="Others">
+                <Link href={"/blog"}>
+                  <CommandItem className="cursor-pointer">
+                    <PenTool className="mr-2 h-4 w-4" />
+                    <span>Blog</span>
+                  </CommandItem>
+                </Link>
+                <SettingsMenu />
+              </CommandGroup>
+            </CommandList>
+          </Command>
         </SheetContent>
       </Sheet>
     </div>

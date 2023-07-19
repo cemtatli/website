@@ -36,43 +36,48 @@ const Bookmarks = () => {
       animate={{ opacity: 1, translateY: 0 }}
       className="mb-5 mt-10"
     >
-      <div className="grid grid-flow-dense grid-cols-1 grid-rows-[masonry] gap-8 leading-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="columns-1 gap-4 sm:columns-2 sm:gap-6 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
         {loading
-          ? Array.from({ length: 15 }, (_, index) => (
-              <div
+          ? Array.from({ length: 16 }, (_, index) => (
+              <Skeleton
                 key={index}
-                className="overflow-hidden rounded-lg odd:sm:col-span-2 first:xl:col-start-2"
+                className="mt-4 flex flex-col overflow-hidden rounded-lg border p-2 first:mt-0 last:mt-0 md:first:mt-4"
               >
                 <Skeleton className="h-48 w-full" />
                 <Skeleton className="mt-4" />
                 <Skeleton className="text-right" />
-              </div>
+              </Skeleton>
             ))
-          : bookmarks.map((bookmark, index) => (
+          : bookmarks.map((bookmark, key) => (
               <div
-                key={index}
-                className="overflow-hidden rounded-lg border dark:border-none odd:sm:col-span-2 first:xl:col-start-2"
+                key={key}
+                className="mt-4 flex flex-col overflow-hidden rounded-lg border p-2 first:mt-0"
               >
                 {bookmark.cover ? (
-                  <Link target="_blank" href={bookmark.url}>
-                    <img
-                      className="h-48 w-full cursor-pointer rounded-lg object-cover"
+                  <Link target="_blank" className="relative" href={bookmark.url}>
+                    <motion.img
+                      className="w-full cursor-pointer rounded-lg object-cover"
                       src={bookmark.cover}
                       alt={bookmark.title}
                     />
+                    <Badge className="absolute bottom-2 right-2 shrink-0 self-start">
+                      {formatCreationDate(bookmark.creationDate)}
+                    </Badge>
                   </Link>
                 ) : (
                   <div className="h-48 w-full rounded" />
                 )}
-                <div className="flex flex-col items-start justify-center gap-4 p-2">
-                  <div className="mt-2 inline-flex w-full flex-col items-center justify-between gap-2.5 md:flex-row">
-                    <h2 className="self-start text-base font-semibold">{bookmark.title}</h2>
-                    <Badge variant={"outline"} className="shrink-0 self-start">
-                      {formatCreationDate(bookmark.creationDate)}
-                    </Badge>
+                <section className="flex flex-col items-start justify-center gap-2 p-2">
+                  <h2 className="self-start text-base font-semibold">{bookmark.title}</h2>
+                  <div className="flex items-center gap-2.5">
+                    {bookmark?.tags.map((tag: string, key: string) => (
+                      <Badge variant={"secondary"} key={key}>
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
-                  <span className="text-sm">{bookmark?.description}</span>
-                </div>
+                  <span className="hidden text-sm md:block">{bookmark?.description}</span>
+                </section>
               </div>
             ))}
       </div>

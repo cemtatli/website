@@ -1,14 +1,5 @@
+import { Bookmark } from "@/types";
 import axios from "axios";
-
-interface Bookmark {
-  title: string;
-  description: string;
-  creationDate: string;
-  url: string;
-  cover: any;
-  tags: string[];
-  note: string;
-}
 
 async function getRaindropBookmarks(API_KEY: string): Promise<Bookmark[]> {
   const response = await axios.get("https://api.raindrop.io/rest/v1/raindrops/35446534", {

@@ -4,7 +4,7 @@ export const sections: Section[] = [
   {
     title: "Career",
     emoji: "🎯",
-    year: "",
+    year: "♾️",
     content:
       "As a Jr. Frontend Developer, my career goal is to level up, stay tech-savvy, and rock complex projects. I want to create user-friendly and jaw-dropping interfaces by keeping up with the latest web trends. I'm all about adapting to shiny new tech and staying in the loop."
   },
