@@ -1,4 +1,4 @@
-import { Section } from "@/types";
+import { Project, Section } from "@/types";
 
 export const sections: Section[] = [
   {
@@ -51,7 +51,7 @@ export const sections: Section[] = [
   }
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: "Lugat",
     openSource: "true",

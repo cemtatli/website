@@ -1,6 +1,5 @@
 "use client";
 
-import Skills from "@/components/skills";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 
@@ -21,7 +20,6 @@ export default function Home() {
           improve himself.
         </span>
       </div>
-      <Skills />
     </motion.section>
   );
 }

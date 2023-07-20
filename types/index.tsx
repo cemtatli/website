@@ -5,6 +5,15 @@ export type Section = {
   content: string;
 };
 
+export type Project = {
+  title: string;
+  desc: string;
+  openSource: string;
+  tech: string[];
+  github: string;
+  link: string;
+};
+
 export type Link = {
   title: string;
   icon: React.ReactNode;
