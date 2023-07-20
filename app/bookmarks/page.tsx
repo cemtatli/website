@@ -43,7 +43,7 @@ const Bookmarks = () => {
                 key={index}
                 className="mt-4 flex flex-col overflow-hidden rounded-lg border p-2 first:mt-0 last:mt-0 md:first:mt-4"
               >
-                <Skeleton className="h-48 w-full" />
+                <Skeleton className="h-36 w-full" />
                 <Skeleton className="mt-4" />
                 <Skeleton className="text-right" />
               </Skeleton>
@@ -60,12 +60,15 @@ const Bookmarks = () => {
                       src={bookmark.cover}
                       alt={bookmark.title}
                     />
-                    <Badge className="absolute bottom-2 right-2 shrink-0 self-start">
+                    <Badge
+                      variant={"secondary"}
+                      className="absolute bottom-2 right-2 shrink-0 self-start rounded-full"
+                    >
                       {formatCreationDate(bookmark.creationDate)}
                     </Badge>
                   </Link>
                 ) : (
-                  <div className="h-48 w-full rounded" />
+                  <div className="h-36 w-full rounded" />
                 )}
                 <section className="flex flex-col items-start justify-center gap-2 p-2">
                   <h2 className="self-start text-base font-semibold">{bookmark.title}</h2>

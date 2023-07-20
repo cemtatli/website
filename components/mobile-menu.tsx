@@ -22,7 +22,7 @@ import {
 import Link from "next/link";
 import React from "react";
 import SettingsMenu from "@/components/settings-menu";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function MobileMenu() {
@@ -79,12 +79,7 @@ export function MobileMenu() {
                     <span>Blog</span>
                   </CommandItem>
                 </Link>
-                <Link href={"/cv"}>
-                  <CommandItem className="cursor-pointer">
-                    <ScrollText className="mr-2 h-4 w-4" />
-                    <span>CV</span>
-                  </CommandItem>
-                </Link>
+     
                 <SettingsMenu />
               </CommandGroup>
             </CommandList>
