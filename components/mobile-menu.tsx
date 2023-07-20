@@ -7,7 +7,8 @@ import {
   Bookmark,
   Inspect,
   FolderOpenDot,
-  PenTool
+  PenTool,
+  ScrollText
 } from "lucide-react";
 import {
   Command,
@@ -45,12 +46,12 @@ export function MobileMenu() {
                     <span>Home</span>
                   </CommandItem>
                 </Link>
-                <Link href="/about">
+                {/*           <Link href="/about">
                   <CommandItem className="cursor-pointer">
                     <User2 className="mr-2 h-4 w-4" />
                     <span>About</span>
                   </CommandItem>
-                </Link>
+                </Link> */}
                 <Link href="/projects">
                   <CommandItem className="cursor-pointer">
                     <FolderOpenDot className="mr-2 h-4 w-4" />
@@ -76,6 +77,12 @@ export function MobileMenu() {
                   <CommandItem className="cursor-pointer">
                     <PenTool className="mr-2 h-4 w-4" />
                     <span>Blog</span>
+                  </CommandItem>
+                </Link>
+                <Link href={"/cv"}>
+                  <CommandItem className="cursor-pointer">
+                    <ScrollText className="mr-2 h-4 w-4" />
+                    <span>CV</span>
                   </CommandItem>
                 </Link>
                 <SettingsMenu />
