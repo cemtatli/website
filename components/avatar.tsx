@@ -1,10 +1,7 @@
-
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "./ui/skeleton";
 
 const AvatarComponent = () => {
-
-
   return (
     <Avatar>
       <AvatarImage alt="cemtatli" src="https://github.com/cemtatli.png" />

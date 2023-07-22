@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { Separator } from "./ui/separator";
 import { Eye, Star, GitFork } from "lucide-react";
 
 const GitHubInfo = () => {
@@ -11,11 +9,20 @@ const GitHubInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://api.github.com/repos/cemtatli/cemtatli.dev");
-        const data = await response.json();
-        setStarCount(data.stargazers_count);
-        setForkCount(data.forks_count);
-        setWatcherCount(data.watchers_count);
+        const cachedData = localStorage.getItem("githubInfo");
+        if (cachedData) {
+          const data = JSON.parse(cachedData);
+          setStarCount(data.stargazers_count);
+          setForkCount(data.forks_count);
+          setWatcherCount(data.watchers_count);
+        } else {
+          const response = await fetch("https://api.github.com/repos/cemtatli/cemtatli.dev");
+          const data = await response.json();
+          setStarCount(data.stargazers_count);
+          setForkCount(data.forks_count);
+          setWatcherCount(data.watchers_count);
+          localStorage.setItem("githubInfo", JSON.stringify(data));
+        }
       } catch (error) {
         console.error("Error:", error);
       }

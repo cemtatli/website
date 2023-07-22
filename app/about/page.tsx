@@ -56,8 +56,8 @@ const About = () => {
                     </div>
                     <div className="flex-grow pl-4">
                       <div className="flex flex-col gap-y-1.5">
-                        <p className="word-break m-0 font-semibold">{section.title}</p>
-                        <p className="word-break m-0 text-sm">{section.content}</p>
+                        <p className="word-break font-semibold">{section.title}</p>
+                        <p className="word-break text-sm">{section.content}</p>
                       </div>
                     </div>
                   </div>

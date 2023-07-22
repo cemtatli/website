@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import getRaindropBookmarks from "@/utils/getRaindropBookmarks";
@@ -7,6 +7,9 @@ import { formatCreationDate } from "@/utils";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { Separator } from "@/components/ui/separator";
 
 const Bookmarks = () => {
   const [bookmarks, setBookmarks] = useState<any[]>([]);
@@ -38,7 +41,7 @@ const Bookmarks = () => {
     >
       <div className="columns-1 gap-4 sm:columns-2 sm:gap-6 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
         {loading
-          ? Array.from({ length: 16 }, (_, index) => (
+          ? Array.from({ length: 12 }, (_, index) => (
               <Skeleton
                 key={index}
                 className="mt-4 flex flex-col overflow-hidden rounded-lg border p-2 first:mt-0 last:mt-0 md:first:mt-4"
@@ -55,14 +58,15 @@ const Bookmarks = () => {
               >
                 {bookmark.cover ? (
                   <Link target="_blank" className="relative" href={bookmark.url}>
-                    <motion.img
+                    <LazyLoadImage
                       className="w-full cursor-pointer rounded-lg object-cover"
                       src={bookmark.cover}
                       alt={bookmark.title}
+                      effect="blur"
                     />
                     <Badge
-                      variant={"secondary"}
-                      className="absolute bottom-2 right-2 shrink-0 self-start rounded-full"
+                      variant={"destructive"}
+                      className="absolute bottom-2 right-2 shrink-0 self-start rounded-full border"
                     >
                       {formatCreationDate(bookmark.creationDate)}
                     </Badge>
@@ -74,11 +78,12 @@ const Bookmarks = () => {
                   <h2 className="self-start text-base font-semibold">{bookmark.title}</h2>
                   <div className="flex items-center gap-2.5">
                     {bookmark?.tags.map((tag: string, key: string) => (
-                      <Badge variant={"secondary"} key={key}>
+                      <Badge variant={"outline"} key={key}>
                         {tag}
                       </Badge>
                     ))}
                   </div>
+                  <Separator />
                   <span className="hidden text-sm md:block">{bookmark?.description}</span>
                 </section>
               </div>
