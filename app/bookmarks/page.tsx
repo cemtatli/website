@@ -64,10 +64,7 @@ const Bookmarks = () => {
                       alt={bookmark.title}
                       effect="blur"
                     />
-                    <Badge
-                      variant={"outline"}
-                      className="absolute bottom-2 right-2 shrink-0 self-start rounded-full border"
-                    >
+                    <Badge className="absolute bottom-2 right-2 shrink-0 self-start rounded-full border">
                       {formatCreationDate(bookmark.creationDate)}
                     </Badge>
                   </Link>
