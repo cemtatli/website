@@ -53,6 +53,23 @@ export const sections: Section[] = [
 
 export const projects: Project[] = [
   {
+    title: "Jhub",
+    openSource: "true",
+    desc: "JobHub a platform for finding job according to your experience",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "Firebase",
+      "NextAuth",
+      "Prisma",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    github: "https://github.com/cemtatli/jhub",
+    link: "https://jhub-page.vercel.app/"
+  },
+  {
     title: "Lugat",
     openSource: "true",
     desc: "The open-source dictionary project that includes the terms frontend developers need to know, along with their Turkish meanings and code examples.",
@@ -115,6 +132,14 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "REST API"],
     github: "https://github.com/cemtatli/react-tailwind-fetch-crash-course",
     link: "https://react-tailwind-fetch-crash-course.vercel.app/"
+  },
+  {
+    title: "Izmir On",
+    openSource: "false",
+    desc: "Online İzmir",
+    tech: ["Next.js", "TypeScript", "REST API"],
+    github: "https://github.com/cemtatli/izmir",
+    link: "https://github.com/cemtatli/izmir"
   },
   {
     title: "Quiz App",

@@ -65,7 +65,7 @@ const Bookmarks = () => {
                       effect="blur"
                     />
                     <Badge
-                      variant={"destructive"}
+                      variant={"outline"}
                       className="absolute bottom-2 right-2 shrink-0 self-start rounded-full border"
                     >
                       {formatCreationDate(bookmark.creationDate)}

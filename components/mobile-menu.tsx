@@ -22,12 +22,12 @@ import {
 import Link from "next/link";
 import React from "react";
 import SettingsMenu from "@/components/settings-menu";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function MobileMenu() {
   return (
-    <div className="block md:hidden">
+    <div className="block sm:hidden">
       <Sheet>
         <SheetTrigger asChild>
           <Button aria-label="mobile-menu" size={"icon"} variant="ghost">
@@ -42,32 +42,34 @@ export function MobileMenu() {
               <CommandGroup>
                 <Link href="/">
                   <CommandItem className="cursor-pointer">
-                    <Inspect className="mr-2 h-4 w-4" />
-                    <span>Home</span>
+                    <SheetClose className="flex">
+                      <Inspect className="mr-2 h-4 w-4" />
+                      <span>Home</span>
+                    </SheetClose>
                   </CommandItem>
                 </Link>
-                {/*           <Link href="/about">
-                  <CommandItem className="cursor-pointer">
-                    <User2 className="mr-2 h-4 w-4" />
-                    <span>About</span>
-                  </CommandItem>
-                </Link> */}
                 <Link href="/projects">
                   <CommandItem className="cursor-pointer">
-                    <FolderOpenDot className="mr-2 h-4 w-4" />
-                    <span>Projects</span>
+                    <SheetClose className="flex">
+                      <FolderOpenDot className="mr-2 h-4 w-4" />
+                      <span>Projects</span>
+                    </SheetClose>
                   </CommandItem>
                 </Link>
                 <Link href={"/bookmarks"}>
                   <CommandItem className="cursor-pointer">
-                    <Bookmark className="mr-2 h-4 w-4" />
-                    <span>Bookmarks</span>
+                    <SheetClose className="flex">
+                      <Bookmark className="mr-2 h-4 w-4" />
+                      <span>Bookmarks</span>
+                    </SheetClose>
                   </CommandItem>
                 </Link>
                 <Link href="/contact">
                   <CommandItem className="cursor-pointer">
-                    <LinkIcon className="mr-2 h-4 w-4" />
-                    <span>Contact</span>
+                    <SheetClose className="flex">
+                      <LinkIcon className="mr-2 h-4 w-4" />
+                      <span>Contact</span>
+                    </SheetClose>
                   </CommandItem>
                 </Link>
               </CommandGroup>
@@ -75,11 +77,12 @@ export function MobileMenu() {
               <CommandGroup heading="Others">
                 <Link href={"/blog"}>
                   <CommandItem className="cursor-pointer">
-                    <PenTool className="mr-2 h-4 w-4" />
-                    <span>Blog</span>
+                    <SheetClose className="flex">
+                      <PenTool className="mr-2 h-4 w-4" />
+                      <span>Blog</span>
+                    </SheetClose>
                   </CommandItem>
                 </Link>
-     
                 <SettingsMenu />
               </CommandGroup>
             </CommandList>
