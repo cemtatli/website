@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import AvatarComponent from "@/components/avatar";
 import { motion } from "framer-motion";
 import { sections } from "@/data";
+import Description from "@/components/description";
 
 const About = () => {
   const uniqueYears: string[] = [];
@@ -20,16 +21,7 @@ const About = () => {
       animate={{ opacity: 1, translateY: 0 }}
       className="mb-5 mt-10"
     >
-      <div className="flex gap-2.5">
-        <AvatarComponent />
-        <div className="flex flex-col space-y-1.5">
-          <h4 className="text-base font-semibold leading-none">Who am I?</h4>
-          <p className="text-sm text-muted-foreground">
-            Briefly frontend developer but if you want the long version
-          </p>
-        </div>
-      </div>
-      <Separator className="my-4" />
+      <Description label="Who am I?" desc="Briefly frontend developer but if you want the long version" />
       <div className="flex items-center text-sm">
         <div className="flex flex-col items-start space-y-2">
           {uniqueYears.map(year => (
@@ -42,9 +34,8 @@ const About = () => {
                 .map((section, index) => (
                   <div
                     key={index}
-                    className={`relative flex pb-8 ${
-                      index === sections.length - 1 ? "last:pb-0" : ""
-                    }`}
+                    className={`relative flex pb-8 ${index === sections.length - 1 ? "last:pb-0" : ""
+                      }`}
                   >
                     <div className="absolute inset-x-0 inset-y-2.5 mt-10 flex w-10 items-center justify-center">
                       <Separator orientation="vertical" className="w-[2px]" />

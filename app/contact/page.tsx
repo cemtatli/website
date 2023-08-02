@@ -18,6 +18,7 @@ import { Separator } from "@/components/ui/separator";
 import AvatarComponent from "@/components/avatar";
 import { motion } from "framer-motion";
 import { Link as LinkTypes } from "@/types";
+import Description from "@/components/description";
 
 const links: LinkTypes[] = [
   {
@@ -74,16 +75,7 @@ const Contact = () => {
       animate={{ opacity: 1, translateY: 0 }}
       className="mb-5 mt-10"
     >
-      <div className="flex gap-2.5">
-        <AvatarComponent />
-        <div className="flex flex-col space-y-1.5">
-          <h4 className="text-base font-semibold leading-none"> Contact me</h4>
-          <p className="text-sm">
-            My social media addresses that I actively use, you can reach me here.
-          </p>
-        </div>
-      </div>
-      <Separator className="my-4" />
+      <Description label="Contact me" desc="My social media addresses that I actively use, you can reach me here." />
       <div className="col-span-2 grid text-sm">
         <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
           {links.map((link, index) => (
