@@ -75,14 +75,6 @@ export function MobileMenu() {
               </CommandGroup>
               <CommandSeparator />
               <CommandGroup heading="Others">
-                <Link href={"/blog"}>
-                  <CommandItem className="p-0">
-                    <SheetClose className="flex-1 flex items-center px-2 py-1.5 ">
-                      <PenTool className="mr-2 h-4 w-4" />
-                      <span>Blog</span>
-                    </SheetClose>
-                  </CommandItem>
-                </Link>
                 <SettingsMenu />
               </CommandGroup>
             </CommandList>
