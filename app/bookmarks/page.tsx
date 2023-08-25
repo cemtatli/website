@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Separator } from "@/components/ui/separator";
-import AvatarComponent from "@/components/avatar";
 import Description from "@/components/description";
 
 const Bookmarks = () => {

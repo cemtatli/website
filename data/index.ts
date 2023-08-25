@@ -53,6 +53,14 @@ export const sections: Section[] = [
 
 export const projects: Project[] = [
   {
+    title: "Houze",
+    openSource: "true",
+    desc: "The Best hotels are on Houze. Compare hotel prices, book hotels without prepayment. Read the latest customer reviews. See the latest pictures of hotels",
+    tech: ["Next.js", "TypeScript", "Zustand", "NextAuth", "Prisma", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/cemtatli/houze",
+    link: ""
+  },
+  {
     title: "Jhub",
     openSource: "true",
     desc: "JobHub a platform for finding job according to your experience",
@@ -84,6 +92,22 @@ export const projects: Project[] = [
     tech: ["React", "REST API", "Axios", "Tailwind CSS", "Firebase", "i18n", "Context API"],
     github: "https://github.com/cemtatli/Coinim",
     link: "https://coinim.vercel.app/"
+  },
+  {
+    title: "izmirim",
+    openSource: "true",
+    desc: "A city guide containing all the up-to-date information about Izmir",
+    tech: [
+      "React",
+      "TypeScript",
+      "TanStack Query",
+      "React-Router",
+      "Framer Motion",
+      "i18n",
+      "REST API"
+    ],
+    github: "https://github.com/cemtatli/izmirim",
+    link: "https://izmirim.vercel.app/"
   },
   {
     title: "Meridian",
@@ -132,14 +156,6 @@ export const projects: Project[] = [
     tech: ["React", "Tailwind CSS", "REST API"],
     github: "https://github.com/cemtatli/react-tailwind-fetch-crash-course",
     link: "https://react-tailwind-fetch-crash-course.vercel.app/"
-  },
-  {
-    title: "Izmir On",
-    openSource: "false",
-    desc: "Online İzmir",
-    tech: ["Next.js", "TypeScript", "REST API"],
-    github: "https://github.com/cemtatli/izmir",
-    link: "https://github.com/cemtatli/izmir"
   },
   {
     title: "Quiz App",
