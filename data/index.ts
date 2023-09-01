@@ -53,6 +53,14 @@ export const sections: Section[] = [
 
 export const projects: Project[] = [
   {
+    title: "Lugat",
+    openSource: "true",
+    desc: "The open-source dictionary project that includes the terms frontend developers need to know, along with their Turkish meanings and code examples.",
+    tech: ["React", "Tailwind CSS", "Context API", "React-Highlighter"],
+    github: "https://github.com/cemtatli/lugat",
+    link: "https://lugat.website"
+  },
+  {
     title: "Houze",
     openSource: "true",
     desc: "The Best hotels are on Houze. Compare hotel prices, book hotels without prepayment. Read the latest customer reviews. See the latest pictures of hotels",
@@ -78,12 +86,12 @@ export const projects: Project[] = [
     link: "https://jhub-page.vercel.app/"
   },
   {
-    title: "Lugat",
+    title: "Kermit CodeSnap",
     openSource: "true",
-    desc: "The open-source dictionary project that includes the terms frontend developers need to know, along with their Turkish meanings and code examples.",
-    tech: ["React", "Tailwind CSS", "Context API", "React-Highlighter"],
-    github: "https://github.com/cemtatli/lugat",
-    link: "https://lugat.website"
+    desc: "Create beautiful images of your code",
+    tech: ["React", "Tailwind CSS", "Zustand", "React-Highlighter"],
+    github: "https://github.com/cemtatli/kermit",
+    link: "https://kermit.cemtatli.dev/"
   },
   {
     title: "Coinim",
@@ -122,7 +130,7 @@ export const projects: Project[] = [
     openSource: "true",
     desc: "Cumulative work experience, projects, blog posts, and bookmarks that I have shared constitute my personal website.",
     tech: ["Next.js", "TypeScript", "shadcn/ui", "REST API", "Tailwind CSS"],
-    github: "https://github.com/cemtatli/cemtatli.dev",
+    github: "https://github.com/cemtatli/blog",
     link: "https://cemtatli.dev"
   },
   {
