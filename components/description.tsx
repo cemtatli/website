@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { Separator } from './ui/separator'
 import AvatarComponent from './avatar'
 
-
 interface DescriptionProps {
   label: string
   desc: string
