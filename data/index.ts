@@ -2,11 +2,24 @@ import { Project, Section } from "@/types";
 
 export const sections: Section[] = [
   {
-    title: "Career",
+    title: "Career Goals",
     emoji: "🎯",
     year: "",
     content:
-      "As a Jr. Frontend Developer, my career goal is to level up, stay tech-savvy, and rock complex projects. I want to create user-friendly and jaw-dropping interfaces by keeping up with the latest web trends. I'm all about adapting to shiny new tech and staying in the loop."
+      "As a Frontend Developer, my career goal is to level up, stay tech-savvy, and rock complex projects. I want to create user-friendly and jaw-dropping interfaces by keeping up with the latest web trends. I'm all about adapting to shiny new tech and staying in the loop."
+  },
+  {
+    title: "Joined Epigra",
+    emoji: "🚀",
+    year: "2023",
+    content: "I joined epigra as a frontend developer. I am very happy to be a part of this team."
+  },
+  {
+    title: "Second University",
+    emoji: "📚",
+    year: "2023",
+    content:
+      "I started a second university degree in computer programming for a different experience."
   },
   {
     title: "Joined the mentee system - Sıfırdanbire",
@@ -54,7 +67,7 @@ export const sections: Section[] = [
 export const projects: Project[] = [
   {
     title: "Lugat",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "The open-source dictionary project that includes the terms frontend developers need to know, along with their Turkish meanings and code examples.",
     tech: ["React", "Tailwind CSS", "Context API", "React-Highlighter"],
     github: "https://github.com/cemtatli/lugat",
@@ -62,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     title: "Houze",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "The Best hotels are on Houze. Compare hotel prices, book hotels without prepayment. Read the latest customer reviews. See the latest pictures of hotels",
     tech: ["Next.js", "TypeScript", "Zustand", "NextAuth", "Prisma", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/cemtatli/houze",
@@ -70,7 +83,7 @@ export const projects: Project[] = [
   },
   {
     title: "Jhub",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "JobHub a platform for finding job according to your experience",
     tech: [
       "Next.js",
@@ -87,7 +100,7 @@ export const projects: Project[] = [
   },
   {
     title: "Kermit CodeSnap",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "Create beautiful images of your code",
     tech: ["React", "Tailwind CSS", "Zustand", "React-Highlighter"],
     github: "https://github.com/cemtatli/kermit",
@@ -95,7 +108,7 @@ export const projects: Project[] = [
   },
   {
     title: "Coinim",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "It offers real-time and historical market data for 100+ cryptocurrencies, allowing users to register, track their favorite coins, and manage their portfolio.",
     tech: ["React", "REST API", "Axios", "Tailwind CSS", "Firebase", "i18n", "Context API"],
     github: "https://github.com/cemtatli/Coinim",
@@ -103,7 +116,7 @@ export const projects: Project[] = [
   },
   {
     title: "izmirim",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "A city guide containing all the up-to-date information about Izmir",
     tech: [
       "React",
@@ -119,7 +132,7 @@ export const projects: Project[] = [
   },
   {
     title: "Meridian",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "A Twitter-like social media application with a user-friendly interface, where people can share their ideas, thoughts, and interests.",
     tech: ["React", "Formik & Yup", "Firebase", "Tailwind CSS", "i18n"],
     github: "https://github.com/cemtatli/Meridian",
@@ -127,7 +140,7 @@ export const projects: Project[] = [
   },
   {
     title: "Portfolio",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "Cumulative work experience, projects, blog posts, and bookmarks that I have shared constitute my personal website.",
     tech: ["Next.js", "TypeScript", "shadcn/ui", "REST API", "Tailwind CSS"],
     github: "https://github.com/cemtatli/blog",
@@ -135,7 +148,7 @@ export const projects: Project[] = [
   },
   {
     title: "Shopla",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "Developed an e-commerce website using Trendyol Baklava design, REST API, Tailwind, React, and Redux Toolkit.",
     tech: ["React", "Redux Toolkit", "Trendyol Baklava Design"],
     github: "https://github.com/cemtatli/shopla",
@@ -143,7 +156,7 @@ export const projects: Project[] = [
   },
   {
     title: "Caps Generator",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "This project allows you to generate captions like any popular meme recently",
     tech: ["React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/cemtatli/herhangibir",
@@ -151,7 +164,7 @@ export const projects: Project[] = [
   },
   {
     title: "Secim Sayacı",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "It is a countdown application prepared for the Presidential and Local Elections of Turkey.",
     tech: ["React", "TypeScript", "Headless UI", "Context API", "REST API"],
     github: "https://github.com/cemtatli/secimsayaci",
@@ -159,7 +172,7 @@ export const projects: Project[] = [
   },
   {
     title: "Rick & Morty",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "The project 'TailwindCSS, React async methods' is a project created to learn about making fetch requests.",
     tech: ["React", "Tailwind CSS", "REST API"],
     github: "https://github.com/cemtatli/react-tailwind-fetch-crash-course",
@@ -167,7 +180,7 @@ export const projects: Project[] = [
   },
   {
     title: "Quiz App",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "A random number of 5 questions are displayed out of 20 questions based on varying levels of difficulty. In questions with 4 options, the user can use the hint option. The result is shown at the end of the quiz.",
     tech: ["HTML", "SCSS", "JavaScript"],
     github: "https://github.com/cemtatli/quizle",
@@ -175,7 +188,7 @@ export const projects: Project[] = [
   },
   {
     title: "Frontendvideos",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "Provides Junior Frontend developers with useful and instructive YouTube videos that can help them break into the industry.",
     tech: ["React", "Headless UI", "Tailwind CSS"],
     github: "https://github.com/cemtatli/frontendvideos",
@@ -183,7 +196,7 @@ export const projects: Project[] = [
   },
   {
     title: "Pomodoro",
-    openSource: "true",
+    isOpenSource: "true",
     desc: "The Pomodoro method is an effective productivity technique. By working for 25 minutes and taking a 5-minute break, you can enhance your efficiency.",
     tech: ["React", "Tailwind CSS"],
     github: "https://github.com/cemtatli/Pomodoro",
@@ -191,7 +204,7 @@ export const projects: Project[] = [
   },
   {
     title: "Todo App",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "Todo app built for test-case",
     tech: ["HTML", "JavaScript", "Tailwind CSS"],
     github: "https://github.com/cemtatli/Todo",
@@ -199,7 +212,7 @@ export const projects: Project[] = [
   },
   {
     title: "Blog",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "Nextwind is a website built using Next.js and Tailwind CSS. It retrieves blog content from DummyJSON.",
     tech: ["Next.js", "Tailwind CSS", "REST API"],
     github: "https://github.com/cemtatli/Nextwind",
@@ -207,7 +220,7 @@ export const projects: Project[] = [
   },
   {
     title: "Getir",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "I used only HTML, TailwindCSS and JavaScript technologies in this clone project.",
     tech: ["HTML5", "JavaScript", "CSS"],
     github: "https://github.com/cemtatli/getir",
@@ -215,7 +228,7 @@ export const projects: Project[] = [
   },
   {
     title: "Youtube Music",
-    openSource: "false",
+    isOpenSource: "false",
     desc: "I used only HTML, TailwindCSS and JavaScript technologies in this clone project.",
     tech: ["HTML5", "JavaScript", "CSS"],
     github: "https://github.com/cemtatli/YoutubeMusic",

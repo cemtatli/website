@@ -21,9 +21,12 @@ const About = () => {
       animate={{ opacity: 1, translateY: 0 }}
       className="mb-5 mt-10"
     >
-      <Description label="Who am I?" desc="Briefly frontend developer but if you want the long version" />
+      <Description
+        label="Who am I?"
+        desc="Briefly frontend developer but if you want the long version"
+      />
       <div className="flex items-center text-sm">
-        <div className="flex flex-col items-start space-y-2">
+        <div className="flex flex-col items-start space-y-3">
           {uniqueYears.map(year => (
             <div key={year}>
               <div className="flex items-center">
@@ -34,8 +37,9 @@ const About = () => {
                 .map((section, index) => (
                   <div
                     key={index}
-                    className={`relative flex pb-8 ${index === sections.length - 1 ? "last:pb-0" : ""
-                      }`}
+                    className={`relative flex pb-8 ${
+                      index === sections.length - 1 ? "last:pb-0" : ""
+                    }`}
                   >
                     <div className="absolute inset-x-0 inset-y-2.5 mt-10 flex w-10 items-center justify-center">
                       <Separator orientation="vertical" className="w-[2px]" />

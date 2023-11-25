@@ -15,6 +15,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { projects } from "@/data";
+import Description from "@/components/description";
 
 const Project = () => {
   return (
@@ -23,6 +24,7 @@ const Project = () => {
       animate={{ opacity: 1, translateY: 0 }}
       className="mb-5 mt-10"
     >
+      <Description label="What have I done" desc="Some of my hobby projects" />
       <Table className="table-auto">
         <TableCaption>A list of your recent projects.</TableCaption>
         <TableHeader>
@@ -35,32 +37,34 @@ const Project = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {projects.map(p => (
-            <TableRow key={p.title}>
-              <TableCell className="pr-0 text-left font-medium ">{p.title}</TableCell>
+          {projects.map(project => (
+            <TableRow key={project.title}>
+              <TableCell className="pr-0 text-left font-medium ">{project.title}</TableCell>
               <TableCell className="hidden max-w-prose cursor-pointer truncate pb-0 font-medium sm:block md:max-w-prose-xl">
                 <HoverCard>
-                  <HoverCardTrigger>{p.desc}</HoverCardTrigger>
-                  <HoverCardContent className="hidden w-full lg:block">{p.desc}</HoverCardContent>
+                  <HoverCardTrigger>{project.desc}</HoverCardTrigger>
+                  <HoverCardContent className="hidden w-full lg:block">
+                    {project.desc}
+                  </HoverCardContent>
                 </HoverCard>
               </TableCell>
               <TableCell className="hidden flex-1 gap-1 md:flex">
-                {p.tech.map(tech => (
+                {project.tech.map(tech => (
                   <Badge className="mr-1 shrink-0 last:mr-0" variant={"outline"} key={tech}>
                     {tech}
                   </Badge>
                 ))}
               </TableCell>
               <TableCell className="px-3 text-center">
-                {p.openSource === "true" ? "🟢" : ""}
+                {project.isOpenSource === "true" ? "🟢" : ""}
               </TableCell>
               <TableCell>
-                <Link target={"_blank"} className="hover:underline" href={p.github}>
+                <Link target={"_blank"} className="hover:underline" href={project.github}>
                   Repo
                 </Link>
               </TableCell>
               <TableCell className="px-2 text-right">
-                <Link target={"_blank"} className="hover:underline" href={p.link}>
+                <Link target={"_blank"} className="hover:underline" href={project.link}>
                   Link
                 </Link>
               </TableCell>

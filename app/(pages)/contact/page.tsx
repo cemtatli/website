@@ -14,8 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import AvatarComponent from "@/components/avatar";
+
 import { motion } from "framer-motion";
 import { Link as LinkTypes } from "@/types";
 import Description from "@/components/description";
@@ -27,24 +26,19 @@ const links: LinkTypes[] = [
     href: "mailto:cemtatli@protonmail.com"
   },
   {
-    title: "Twitter",
-    icon: <TwitterIcon width={20} />,
-    href: "https://www.twitter.com/vaycem"
-  },
-  {
     title: "GitHub",
     icon: <Github width={20} />,
     href: "https://www.github.com/cemtatli"
   },
   {
+    title: "Twitter",
+    icon: <TwitterIcon width={20} />,
+    href: "https://www.twitter.com/iltatmec"
+  },
+  {
     title: "LinkedIn",
     icon: <LinkedinIcon width={20} />,
     href: "https://www.linkedin.com/in/cemtatli/"
-  },
-  {
-    title: "Codepen",
-    icon: <Codepen width={20} />,
-    href: "https://codepen.io/cemtatli"
   },
   {
     title: "Medium",
@@ -65,6 +59,11 @@ const links: LinkTypes[] = [
     title: "Spotify",
     icon: <Headphones width={20} />,
     href: "https://open.spotify.com/user/di1kgdass5is7rhxmu7mqzelc"
+  },
+  {
+    title: "Codepen",
+    icon: <Codepen width={20} />,
+    href: "https://codepen.io/cemtatli"
   }
 ];
 
@@ -75,7 +74,10 @@ const Contact = () => {
       animate={{ opacity: 1, translateY: 0 }}
       className="mb-5 mt-10"
     >
-      <Description label="Contact me" desc="My social media addresses that I actively use, you can reach me here." />
+      <Description
+        label="Contact me"
+        desc="My social media addresses that I actively use, you can reach me here."
+      />
       <div className="col-span-2 grid text-sm">
         <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
           {links.map((link, index) => (

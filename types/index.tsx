@@ -8,7 +8,7 @@ export type Section = {
 export type Project = {
   title: string;
   desc: string;
-  openSource: string;
+  isOpenSource: string;
   tech: string[];
   github: string;
   link: string;
