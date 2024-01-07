@@ -48,6 +48,7 @@
     "react-icons": "^4.10.1",
     "react-lazy-load-image-component": "^1.6.0",
     "swr": "^2.2.0",
+    "tailwind": "^4.0.0",
     "tailwind-merge": "^1.13.2",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.3"
