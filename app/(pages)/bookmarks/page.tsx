@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import getRaindropBookmarks from "@/utils/getRaindropBookmarks";
+import getRaindropBookmarks from "@/utils/raindrop";
 import { formatCreationDate } from "@/utils";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";

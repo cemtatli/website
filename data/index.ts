@@ -47,7 +47,7 @@ export const sections: Section[] = [
     emoji: "🧑🏻‍🎓",
     year: "2022",
     content:
-      "I graduated from the Management Information Systems department. During my university years, I worked on projects in various programming languages such as Python, PHP (Joomla), Flutter, and Kotlin."
+      "I graduated from the Management Information Systems department. During my university years, I worked on projects in various programming languages such as Python, Flutter, and Kotlin."
   },
   {
     title: "Introduction to the Crypto World",

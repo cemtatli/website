@@ -79,7 +79,7 @@ const Contact = () => {
         desc="My social media addresses that I actively use, you can reach me here."
       />
       <div className="col-span-2 grid text-sm">
-        <div className="flex flex-col gap-4 md:flex-row md:flex-wrap">
+        <div className="mb-5 ml-4 mr-4 flex flex-col gap-4 md:flex-row md:flex-wrap">
           {links.map((link, index) => (
             <Link
               className={buttonVariants({ variant: "outline" })}
