@@ -9,6 +9,19 @@ export const sections: Section[] = [
       "As a Frontend Developer, my career goal is to level up, stay tech-savvy, and rock complex projects. I want to create user-friendly and jaw-dropping interfaces by keeping up with the latest web trends. I'm all about adapting to shiny new tech and staying in the loop."
   },
   {
+    title: "Master's Degree",
+    emoji: "📚",
+    year: "2024",
+    content:
+      "I started my master's degree in business intelligence and data analysis."
+    },
+  {
+    title: "Joined E12",
+    emoji: "🚀",
+    year: "2024",
+    content: "I joined E12 as a Frontend developer. New challenges, new projects, new team. I'm excited to be a part of this team."
+  },
+  {
     title: "Joined Epigra",
     emoji: "🚀",
     year: "2023",
