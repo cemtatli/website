@@ -1,12 +1,17 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    RAINDROP_API_KEY: process.env.RAINDROP_API_KEY,
-    CV_LINK: process.env.CV_LINK
-  },
   images: {
-    domains: ["img.icons8.com", "upload.wikimedia.org"]
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github.com",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+    ],
   },
-  productionBrowserSourceMaps: true
 };
 
 module.exports = nextConfig;

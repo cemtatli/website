@@ -1,32 +1,29 @@
 import "./globals.css";
+
 import { Inter } from "next/font/google";
-import Header from "@/components/header";
-import Wrapper from "@/components/layout/wrapper";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@vercel/analytics/react";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "cemtatli.dev",
+  title: "Cem Tatlı | Frontend Developer",
   description:
-    "cemtatli.dev - Cem Tatlı'nın kişisel websitesi, projelerini, blog ve bookmarklarını içerir.",
-  keywords: [
-    "cemtatli, portfolio, blog, bookmarks, web geliştirme, Next.js, TypeScript, frontend, typscript, tailwindcss"
-  ],
-  authors: [{ name: "iltatmec" }]
+    "Cem Tatlı - Frontend Developer. React, Next.js ve modern web teknolojileri ile kullanıcı dostu arayüzler geliştiriyorum.",
+  keywords: ["cem tatlı", "frontend developer", "react", "next.js", "typescript", "tailwindcss"],
+  authors: [{ name: "Cem Tatlı", url: "https://cemtatli.dev" }]
 };
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-geist"
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="tr" suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <Wrapper>{children}</Wrapper>
+          {children}
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );
