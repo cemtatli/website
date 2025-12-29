@@ -4,9 +4,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { socialLinks, profile } from "@/data";
-import { ArrowUpRight } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -59,14 +61,16 @@ export default function Home() {
           <em className="font-serif italic">Crafting interfaces.</em> Building polished software and
           web experiences. Experimenting with magical details in user interfaces. Frontend Developer
           at{" "}
-          <Link
-            href="https://e12.com.tr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-4 transition-colors hover:text-muted-foreground"
-          >
-            E12
-          </Link>
+          <span className="relative inline-block">
+            <Link
+              href="https://e12.com.tr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-muted-foreground"
+            >
+              E12
+            </Link>
+          </span>
           .
         </p>
       </motion.section>
@@ -87,7 +91,11 @@ export default function Home() {
               className="inline-flex items-center gap-1 rounded-full border px-4 py-2 text-sm transition-all duration-200 hover:scale-105 hover:bg-muted"
             >
               {link.name}
-              <ArrowUpRight className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <HugeiconsIcon
+                icon={ArrowUpRight01Icon}
+                size={14}
+                className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
             </Link>
           </motion.div>
         ))}

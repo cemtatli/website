@@ -1,7 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sun, Moon, Monitor } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Sun03Icon, Moon02Icon } from "@hugeicons/core-free-icons";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -17,13 +18,10 @@ export function ThemeToggle() {
     return (
       <div className="flex items-center gap-1">
         <button className="rounded-md p-2 opacity-50">
-          <Sun className="size-4" />
+          <HugeiconsIcon icon={Sun03Icon} size={16} />
         </button>
         <button className="rounded-md p-2 opacity-50">
-          <Moon className="size-4" />
-        </button>
-        <button className="rounded-md p-2 opacity-50">
-          <Monitor className="size-4" />
+          <HugeiconsIcon icon={Moon02Icon} size={16} />
         </button>
       </div>
     );
@@ -39,7 +37,7 @@ export function ThemeToggle() {
         )}
         aria-label="Light mode"
       >
-        <Sun className="size-4" />
+        <HugeiconsIcon icon={Sun03Icon} size={16} />
       </button>
       <button
         onClick={() => setTheme("dark")}
@@ -49,17 +47,7 @@ export function ThemeToggle() {
         )}
         aria-label="Dark mode"
       >
-        <Moon className="size-4" />
-      </button>
-      <button
-        onClick={() => setTheme("system")}
-        className={cn(
-          "rounded-md p-2 transition-colors hover:bg-muted",
-          theme === "system" && "bg-muted text-foreground"
-        )}
-        aria-label="System mode"
-      >
-        <Monitor className="size-4" />
+        <HugeiconsIcon icon={Moon02Icon} size={16} />
       </button>
     </div>
   );
