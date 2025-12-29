@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@hugeicons/core-free-icons':
-    specifier: ^1.2.1
+    specifier: ^1.0.0
     version: 1.2.1
   '@hugeicons/react':
     specifier: ^1.1.4
